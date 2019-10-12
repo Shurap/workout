@@ -1,0 +1,8 @@
+.header {
+  /* border: 2px solid green; */
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0px;
+  height: 70px;
+  width: 100%;
+}

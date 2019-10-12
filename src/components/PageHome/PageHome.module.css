@@ -1,8 +1,8 @@
-.picture {
+.backgroundPicture {
   height: 500px;
   background-image: url('../../images/fitness-1882721_1920.jpg');
   background-attachment: fixed;
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
@@ -17,11 +17,11 @@
 }
 
 .wrapperImage {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .image {
-  border: 2px solid blue;
-  margin-top: -150px;
+  /* border: 2px solid blue; */
+  margin-top: -120px;
   z-index: 5;
 }
