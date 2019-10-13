@@ -1,4 +1,7 @@
 .backgroundPicture {
+  /* border: 5px solid peru; */
+  display: flex;
+  align-items: center;
   height: 500px;
   background-image: url('../../images/fitness-1882721_1920.jpg');
   background-attachment: fixed;
@@ -9,6 +12,7 @@
 }
 
 .next {
+  /* border: 5px solid red; */
   background-color: #fff;
   width: 100vw;
   height: 100vh;
@@ -18,6 +22,15 @@
 
 .wrapperImage {
   /* border: 2px solid red; */
+}
+
+.wrapperText {
+  /* border: 5px solid magenta; */
+  /* margin-top: 100px; */
+  /* padding-top: 100px; */
+  
+  color: white;
+  padding: 50px;
 }
 
 .image {

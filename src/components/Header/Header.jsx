@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import SwitcherLang from './SwitcherLang';
+import withTranslator from '../../hocs/withTranslator/withTranslator';
 
 const Header = () => {
 
@@ -11,4 +12,6 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default withTranslator(Header);
+
+// export default Header;

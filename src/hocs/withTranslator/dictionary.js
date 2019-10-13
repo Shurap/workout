@@ -1,12 +1,12 @@
-export default dictionary = {
+const dictionary = {
   'en': {
     text: 'text',
-    start: 'start',
-    welcome: 'welcome'
+    textOnFirstImage: 'The personal training diary in your pocket'
   },
   'ru': {
     text: 'текст',
-    start: 'старт',
-    welcome: 'добро пожаловать'
+    textOnFirstImage: 'Персональный дневник тренировок у тебя в кармане'
   }
 }
+
+export default dictionary;
