@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from '../Router';
 import Header from '../Header';
+import Footer from '../Footer';
 import styles from './App.module.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div className={styles.app}>
       <Header />
       <Router />
+      <Footer />
     </div>
   );
 }

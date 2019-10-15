@@ -1,5 +1,5 @@
 .backgroundPicture {
-  /* border: 5px solid peru; */
+  border: 5px solid peru;
   display: flex;
   align-items: center;
   height: 500px;
@@ -11,30 +11,37 @@
   z-index: 1;
 }
 
-.next {
-  /* border: 5px solid red; */
-  background-color: #fff;
-  width: 100vw;
-  height: 100vh;
-  /* margin-top: 70vh; */
-  /* padding: 5vw; */
-}
-
-.wrapperImage {
-  /* border: 2px solid red; */
-}
-
 .wrapperText {
-  /* border: 5px solid magenta; */
+  border: 5px solid greenyellow;
   /* margin-top: 100px; */
-  /* padding-top: 100px; */
-  
+  /* padding-top: 100px; */ 
   color: white;
   padding: 50px;
 }
 
-.image {
-  /* border: 2px solid blue; */
-  margin-top: -120px;
-  z-index: 5;
+.pageContext {
+  border: 5px solid red;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  /* width: 100vw; */
+  /* height: 100vh; */
+
+  /* margin-top: 70vh; */
+  /* padding: 5vw; */
+}
+
+.fieldLeft {
+  border: 5px solid green;
+  width: 25%;
+}
+
+.fieldCenter {
+  border: 5px solid blueviolet;
+  /* flex-grow: 3; */
+}
+
+.fieldRight {
+  border: 5px solid blue;
+  width: 25%;
 }
