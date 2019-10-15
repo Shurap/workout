@@ -1,5 +1,5 @@
 .backgroundPicture {
-  border: 5px solid peru;
+  /* border: 5px solid peru; */
   display: flex;
   align-items: center;
   height: 500px;
@@ -12,7 +12,7 @@
 }
 
 .wrapperText {
-  border: 5px solid greenyellow;
+  /* border: 5px solid greenyellow; */
   /* margin-top: 100px; */
   /* padding-top: 100px; */ 
   color: white;
@@ -20,7 +20,7 @@
 }
 
 .pageContext {
-  border: 5px solid red;
+  /* border: 5px solid red; */
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -32,16 +32,16 @@
 }
 
 .fieldLeft {
-  border: 5px solid green;
-  width: 25%;
+  /* border: 5px solid green; */
+  width: 30%;
 }
 
 .fieldCenter {
-  border: 5px solid blueviolet;
+  /* border: 5px solid blueviolet; */
   /* flex-grow: 3; */
 }
 
 .fieldRight {
-  border: 5px solid blue;
-  width: 25%;
+  /* border: 5px solid blue; */
+  width: 30%;
 }

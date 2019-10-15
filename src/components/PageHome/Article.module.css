@@ -1,6 +1,7 @@
 .article {
   /* border: 5px solid blue; */
   display: flex;
+  justify-content: space-between;
   height: 500px;
   margin-bottom: 100px;
 }
@@ -9,6 +10,7 @@
   /* border: 5px solid orangered; */
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 50px;
   color: black;
   width: 50%;
@@ -17,7 +19,8 @@
 .wrapperImage {
   /* border: 5px solid green; */
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
 }
 
 .image {
