@@ -1,0 +1,91 @@
+.hamburgerMenu {
+  position: absolute;
+  top: 7.5px;
+  right: 5px;
+  border: 1px solid rgb(26, 25, 25);
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 50px;
+  height: 50px;
+  transition: 0.4s;
+}
+
+.fullHamburgerMenu {
+  height: 230px; 
+  width: 150px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+}
+
+.button{
+  margin-top: 5px;
+  margin-right: 7px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  /* border: 1px solid red; */
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  /* border: 1px solid green; */
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  /* border: 1px solid blue; */
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.wrapperLinksOn {
+  /* border: 2px solid blue; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  transition: opacity 0.9s;
+}
+
+.wrapperLinksOff {
+  position: relative;
+  left: -9999px;
+  opacity: 0;
+}
+
+.links {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+.gag {
+  display: none;
+  /* border: 5px solid mediumslateblue;  */
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 850px) {
+  .hamburgerMenu {
+      display: flex;
+  }
+  .gag {
+    display: block;
+  }
+}

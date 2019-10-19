@@ -22,8 +22,8 @@
 .pageContext {
   /* border: 5px solid red; */
   background-color: white;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   /* width: 100vw; */
   /* height: 100vh; */
 
@@ -31,17 +31,22 @@
   /* padding: 5vw; */
 }
 
-.fieldLeft {
-  /* border: 5px solid green; */
-  width: 30%;
-}
-
 .fieldCenter {
   /* border: 5px solid blueviolet; */
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  
   /* flex-grow: 3; */
 }
 
-.fieldRight {
-  /* border: 5px solid blue; */
-  width: 30%;
+.separator {
+  /* border: 5px solid greenyellow; */
+  background-color: rgb(121, 121, 121);
+  height: 1px;
+  width: 100%;
+  /* margin-right: 10px;
+  margin-left: 10px; */
+  /* margin-bottom: 10px; */
 }

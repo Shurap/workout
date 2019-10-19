@@ -11,7 +11,7 @@ const SwitcherLang = (props) => {
   }
 
   return (
-      <select onChange={updateLanguage}>
+      <select className={styles.switcherlang} onChange={updateLanguage}>
         <option value='en'>english</option>
         <option value='ru'>русский</option>
       </select>

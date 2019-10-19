@@ -7,6 +7,8 @@ const dictionary = {
                      desktop PC, making data entry fast and easy, taking less of your valuable time.`,
     headerHome: 'Home',
     headerDiary: 'Diary',
+    headerLogin: 'Login',
+    headerCreateAccount: 'Register',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -17,6 +19,8 @@ const dictionary = {
                      меньше вашего драгоценного времени.`,
     headerHome: 'Домой',
     headerDiary: 'Дневник',
+    headerLogin: 'Войти',
+    headerCreateAccount: 'Регистрация',
   }
 }
 

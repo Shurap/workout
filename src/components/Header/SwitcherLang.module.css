@@ -1,0 +1,8 @@
+.switcherlang {
+  border: 2px solid white; 
+  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 2px;
+  height: 30px;
+}

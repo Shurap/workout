@@ -16,13 +16,15 @@ const PageHome = (props) => {
         </div>
       </div>
       <div className={styles.pageContext}>
-        <div className={styles.fieldLeft}></div>
+        {/* <div className={styles.fieldLeft}></div> */}
         <div className={styles.fieldCenter}>
           <Article image={picturePhones} text={props.dictionary.textOnHomePage} order='0' />
+          <div className={styles.separator}></div>
           <Article image={pictureMuscle} text={props.dictionary.text} order='1' />
+          <div className={styles.separator}></div>
           <Article image={pictureTest} text={props.dictionary.text} order='0' />
         </div>
-        <div className={styles.fieldRight}></div>
+        {/* <div className={styles.fieldRight}></div> */}
       </div>
     </div>
   )
