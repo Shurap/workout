@@ -11,20 +11,18 @@ const PageHome = (props) => {
     <div>
       <div className={styles.backgroundPicture}>
         <div className={styles.wrapperText}>
-          <h2>{props.dictionary.textOnFirstImage}</h2>
-          <p>{props.dictionary.smalltextOnFirstImage}</p>
+          <h2 className={styles.text}>{props.dictionary.textOnFirstImage}</h2>
+          <p className={styles.text}>{props.dictionary.smalltextOnFirstImage}</p>
         </div>
       </div>
       <div className={styles.pageContext}>
-        {/* <div className={styles.fieldLeft}></div> */}
         <div className={styles.fieldCenter}>
-          <Article image={picturePhones} text={props.dictionary.textOnHomePage} order='0' />
+          <Article image={picturePhones} text={props.dictionary.textOnHomePage} caption={props.dictionary.test} order='0' />
           <div className={styles.separator}></div>
-          <Article image={pictureMuscle} text={props.dictionary.text} order='1' />
+          <Article image={pictureMuscle} text={props.dictionary.text} caption={props.dictionary.test} order='1' />
           <div className={styles.separator}></div>
-          <Article image={pictureTest} text={props.dictionary.text} order='0' />
+          <Article image={pictureTest} text={props.dictionary.text} caption={props.dictionary.test} order='0' />
         </div>
-        {/* <div className={styles.fieldRight}></div> */}
       </div>
     </div>
   )

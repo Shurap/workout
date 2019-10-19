@@ -8,7 +8,7 @@ const Article = (props) => {
   return (
     <div className={styles.article}>
       <div className={styles.wrapperText} style={articleOrder}>
-        <h2>Test test test</h2>
+        <h2>{props.caption}</h2>
         <span className={styles.underline}></span>
         <p>{props.text}</p>
       </div>
