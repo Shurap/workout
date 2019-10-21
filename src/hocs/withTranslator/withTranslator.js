@@ -18,23 +18,3 @@ const withTranslator = (Component) => {
 }
 
 export default withTranslator;
-
-
-
-/*
-import React from 'react';
-// import { connect } from 'react-redux';
-// import dictionary from './dictionary';
-
-const withTranslator = (WrappedComponent) => {
-  return <WrappedComponent a='2'/>
-}
-
-// const mapStateToProps = (state) => {
-//   language: state.language.language
-// }
-
-// export default connect(mapStateToProps)(withTranslator);
-
-export default withTranslator;
-*/

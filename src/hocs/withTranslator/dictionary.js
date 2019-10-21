@@ -10,6 +10,11 @@ const dictionary = {
     headerDiary: 'Diary',
     headerLogin: 'Login',
     headerCreateAccount: 'Register',
+    email: 'E-mail adress',
+    password: 'Password',
+    logIn: 'Log in',
+    loginText: 'Don\'t have an account?',
+    loginSignUp: ' Sign Up',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -23,6 +28,11 @@ const dictionary = {
     headerDiary: 'Дневник',
     headerLogin: 'Войти',
     headerCreateAccount: 'Регистрация',
+    email: 'Адрес эл.почты',
+    password: 'Пароль',
+    logIn: 'Войти',
+    loginText: 'Нет аккаунта?',
+    loginSignUp: ' Регистрация',
   }
 }
 
