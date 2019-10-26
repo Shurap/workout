@@ -1,11 +1,18 @@
 import React from 'react';
 import styles from './FormLogInRedux.module.css';
 import { Field, reduxForm } from 'redux-form'
-import SvgPassword from './SvgPassword';
-import SvgMail from './SvgMail';
+import SvgPassword from '../common/svg/SvgPassword';
+import SvgMail from '../common/svg/SvgMail';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
+import { required } from '../common/forms/validators'
+import RenderTextField from '../common/forms/RenderTextField';
+
+const requiredWithText = required('xxxcccxxx');
 
 const FormLogIn = (props) => {
+
+  // const requiredWithText = required(props.dictionary.errorRequired);
+
   return (
     <form className={styles.formLogIn} onSubmit={props.handleSubmit}>
       <div className={styles.wrapperBlockInput}>
@@ -13,12 +20,13 @@ const FormLogIn = (props) => {
         <div className={styles.wrapperInput}>
           <Field
             className={styles.textInput}
-            component={'input'}
-            name={'email'}
+            component={RenderTextField}
+            name='email'
+            validate={[requiredWithText]}
             placeholder={props.dictionary.email}
             autoComplete="off"
           />
-          <span className={styles.underEdit}></span>
+          {/* <span className={styles.underEdit}></span> */}
         </div>
       </div>
 
@@ -27,12 +35,13 @@ const FormLogIn = (props) => {
         <div className={styles.wrapperInput}>
           <Field
             className={styles.textInput}
-            component={'input'}
-            name={'password'}
+            component={RenderTextField}
+            name='password'
+            validate={[requiredWithText]}
             placeholder={props.dictionary.password}
             autoComplete="off"
           />
-          <span className={styles.underEdit}></span>
+          {/* <span className={styles.underEdit}></span> */}
         </div>
       </div>
 

@@ -15,6 +15,7 @@ const dictionary = {
     logIn: 'Log in',
     loginText: 'Don\'t have an account?',
     loginSignUp: ' Sign Up',
+    errorRequired: 'Field is required',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -33,6 +34,7 @@ const dictionary = {
     logIn: 'Войти',
     loginText: 'Нет аккаунта?',
     loginSignUp: ' Регистрация',
+    errorRequired: 'Поле обязательно для заполнения',
   }
 }
 

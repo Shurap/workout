@@ -9,7 +9,8 @@
 .wrapperBlockInput {
   /* border: 2px solid blue; */
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-left: 5px;
 }
 
 .wrapperInput {
@@ -21,7 +22,11 @@
 .textInput {
   color: white;
   background-color: transparent;
-  border: none;
+  border-right: 1px solid gray;
+  border-top: none;
+  border-bottom: 1px solid gray;
+  border-left: none;
+  border-radius: 0 5px 0 0;
   text-align: left;
   font-size: 16px;
   margin: 5px 5px 5px 5px;
@@ -31,8 +36,7 @@ input:focus {
   outline: none;    
 }
 
-.underEdit {
-  /* border: 5px solid orangered; */
+/* .underEdit {
   background-color: white;
   height: 1px;
   margin-bottom: 10px;
@@ -42,7 +46,7 @@ input:focus {
 
 input:focus+.underEdit {
   transform: scale(1);
-}
+} */
 
 .buttonLogIn {
   display: block;

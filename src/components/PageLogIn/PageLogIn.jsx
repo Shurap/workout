@@ -5,6 +5,8 @@ import withTranslator from '../../hocs/withTranslator/withTranslator';
 import { Link } from 'react-router-dom';
 import FormLogInRedux from './FormLogInRedux';
 
+import SvgBarbell from '../common/svg/SvgBarbell';
+
 const LogIn = (props) => {
 
   const onSubmit = (data) => {
@@ -14,7 +16,8 @@ const LogIn = (props) => {
   return (
     <div className={styles.logIn}>
       <div className={styles.window}>
-        <img className={styles.image} src={logo}></img>
+        <SvgBarbell />
+        {/* <img className={styles.image} src={logo}></img> */}
         <FormLogInRedux onSubmit={onSubmit} />
         <div className={styles.wrappedText}>
           {props.dictionary.loginText}

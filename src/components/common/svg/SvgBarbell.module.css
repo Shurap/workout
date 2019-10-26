@@ -1,0 +1,30 @@
+.wrapperSvg {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.svg {
+  /* border: 2px solid blue; */
+  padding: 5px;
+  width: 50%;
+  height: 50%;
+}
+
+.path {
+  fill: rgba(10,10,10,0.1);
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s .3s linear forwards;
+}
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

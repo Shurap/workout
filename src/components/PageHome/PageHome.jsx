@@ -6,13 +6,18 @@ import pictureTest from '../../images/SWLwebsite.png';
 import styles from './PageHome.module.css';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 
+import SvgBarbell from '../common/svg/SvgBarbell'
+
 const PageHome = (props) => {
   return (
     <div>
       <div className={styles.backgroundPicture}>
-        <div className={styles.wrapperText}>
-          <h2 className={styles.text}>{props.dictionary.textOnFirstImage}</h2>
-          <p className={styles.text}>{props.dictionary.smalltextOnFirstImage}</p>
+        <div className={styles.wrapperBlockSvgText}>
+          <div className={styles.wrapperText}>
+            <h2 className={styles.text}>{props.dictionary.textOnFirstImage}</h2>
+            <p className={styles.text}>{props.dictionary.smalltextOnFirstImage}</p>
+          </div>
+          <SvgBarbell />
         </div>
       </div>
       <div className={styles.pageContext}>
