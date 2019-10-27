@@ -4,10 +4,14 @@ import dictionary from './dictionary';
 
 const withTranslator = (Component) => {
   
-  class WrapperComponent extends React.Component {
-    render() {
-      return <Component {...this.props} dictionary={dictionary[this.props.language]} />
-    }
+  // class WrapperComponent extends React.Component {
+  //   render() {
+  //     return <Component {...this.props} dictionary={dictionary[this.props.language]} />
+  //   }
+  // }
+
+  const WrapperComponent = (props) => {
+    return <Component {...props} dictionary={dictionary[props.language]} />
   }
 
   const mapStateToProps = (state) => ({
