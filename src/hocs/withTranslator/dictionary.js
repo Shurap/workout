@@ -16,6 +16,8 @@ const dictionary = {
     loginText: 'Don\'t have an account?',
     loginSignUp: ' Sign Up',
     errorRequired: 'Field is required',
+    errorminLength: 'Must be more than 7 characters',
+    erroremailTrue: 'Invalid email address',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -35,6 +37,8 @@ const dictionary = {
     loginText: 'Нет аккаунта?',
     loginSignUp: ' Регистрация',
     errorRequired: 'Поле обязательно для заполнения',
+    errorminLength: 'Должно быть больше 7 символов',
+    erroremailTrue: 'Неправильный адрес почты',
   }
 }
 

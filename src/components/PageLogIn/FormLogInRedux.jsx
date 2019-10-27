@@ -4,18 +4,19 @@ import { Field, reduxForm } from 'redux-form'
 import SvgPassword from '../common/svg/SvgPassword';
 import SvgMail from '../common/svg/SvgMail';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
-import { required } from '../common/forms/validators'
+import { required, minLength, emailTrue } from '../common/forms/validators'
 import RenderTextField from '../common/forms/RenderTextField';
-
-// const requiredWithText = required('xxxcccxxx');
 
 const FormLogIn = (props) => {
 
-  const requiredWithText = useCallback(() => {
-    required('sssssssssssssssssss')
-  }, []); 
+  const requiredWithText = useCallback(required(props.dictionary.errorRequired),
+    [props.dictionary.errorRequired]);
 
-  console.log('requiredWithText:', requiredWithText);
+  const minLengthwithText = useCallback(minLength(props.dictionary.errorminLength),
+    [props.dictionary.errorminLength])
+
+  const emailTrueText = useCallback(emailTrue(props.dictionary.erroremailTrue),
+  [props.dictionary.erroremailTrue])
 
   return (
     <form className={styles.formLogIn} onSubmit={props.handleSubmit}>
@@ -26,7 +27,7 @@ const FormLogIn = (props) => {
             className={styles.textInput}
             component={RenderTextField}
             name='email'
-            validate={[requiredWithText]}
+            validate={[requiredWithText, emailTrueText]}
             placeholder={props.dictionary.email}
             autoComplete="off"
           />
@@ -41,7 +42,7 @@ const FormLogIn = (props) => {
             className={styles.textInput}
             component={RenderTextField}
             name='password'
-            validate={[requiredWithText]}
+            validate={[requiredWithText, minLengthwithText]}
             placeholder={props.dictionary.password}
             autoComplete="off"
           />
