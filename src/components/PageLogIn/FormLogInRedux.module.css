@@ -63,3 +63,11 @@ input:focus+.underEdit {
 .buttonLogIn:focus {
   outline: none;
 }
+
+.buttonLogIn:hover {
+  background-color: #551bf5;
+}
+
+.buttonLogIn:active {
+  background-color: #3f13ba;
+}
