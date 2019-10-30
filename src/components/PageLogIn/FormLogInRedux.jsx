@@ -31,7 +31,6 @@ const FormLogIn = (props) => {
             placeholder={props.dictionary.email}
             autoComplete="off"
           />
-          {/* <span className={styles.underEdit}></span> */}
         </div>
       </div>
 
@@ -46,7 +45,6 @@ const FormLogIn = (props) => {
             placeholder={props.dictionary.password}
             autoComplete="off"
           />
-          {/* <span className={styles.underEdit}></span> */}
         </div>
       </div>
 
