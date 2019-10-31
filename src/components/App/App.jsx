@@ -2,6 +2,7 @@ import React from 'react';
 import Router from '../Router';
 import Header from '../Header';
 import Footer from '../Footer';
+import WindowError from '../common/WindowError'
 import styles from './App.module.css';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <div className={styles.app}>
       <Header />
       <Router />
+      <WindowError />
       <Footer />
     </div>
   );

@@ -8,10 +8,13 @@ import { Provider } from 'react-redux';
 import store from '../src/redux/store';
 import Firebase, { FirebaseContext } from './firebase';
 
+import {firebase} from './firebase/firebase'
+
 ReactDOM.render(
   (
     <Provider store={store}>
-      <FirebaseContext.Provider value={new Firebase()}>
+      {/* <FirebaseContext.Provider value={new Firebase()}> */}
+      <FirebaseContext.Provider value={firebase}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
