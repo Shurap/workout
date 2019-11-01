@@ -7,11 +7,13 @@ import SvgBarbell from '../common/svg/SvgBarbell';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { doSignIn } from '../../redux/actions/actionSignIn'
+import { withRouter } from 'react-router-dom';
 
 const LogIn = (props) => {
   
   const onSubmit = (data) => {
     props.doSignIn(data);
+    // props.history.push('/home');
   }
 
   return (
@@ -32,4 +34,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   doSignIn
 }, dispatch);
 
-export default withTranslator(connect(null, mapDispatchToProps)(LogIn));
+export default withRouter(withTranslator(connect(null, mapDispatchToProps)(LogIn)));
