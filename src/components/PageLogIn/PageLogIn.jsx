@@ -23,7 +23,7 @@ const LogIn = (props) => {
         <Spinner />
         <div className={styles.wrappedText}>
           {props.dictionary.loginText}
-          <Link className={styles.links} to='/account'>{props.dictionary.loginSignUp}</Link>
+          <Link className={styles.links} to='/register'>{props.dictionary.loginSignUp}</Link>
         </div>
       </div>
     </div >

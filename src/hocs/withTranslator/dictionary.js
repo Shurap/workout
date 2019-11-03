@@ -12,12 +12,16 @@ const dictionary = {
     headerCreateAccount: 'Register',
     email: 'E-mail adress',
     password: 'Password',
+    confirmPassword: 'Confirm password',
+    name: 'Name',
     logIn: 'Log in',
+    SignUp: 'Sign up',
     loginText: 'Don\'t have an account?',
     loginSignUp: ' Sign Up',
     errorRequired: 'Field is required',
     errorminLength: 'Must be more than 6 characters',
     erroremailTrue: 'Invalid email address',
+    errormaxLength: 'Must be less than 10 characters',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -33,12 +37,16 @@ const dictionary = {
     headerCreateAccount: 'Регистрация',
     email: 'Адрес эл.почты',
     password: 'Пароль',
+    confirmPassword: 'Повторить пароль',
+    name: 'Имя',
     logIn: 'Войти',
+    SignUp: 'Регистрация',
     loginText: 'Нет аккаунта?',
     loginSignUp: ' Регистрация',
     errorRequired: 'Поле обязательно для заполнения',
     errorminLength: 'Должно быть больше 6 символов',
     erroremailTrue: 'Неправильный адрес почты',
+    errormaxLength: 'Должно быть меньше 10 символов',
   }
 }
 

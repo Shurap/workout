@@ -31,15 +31,19 @@
   animation: rotate 2s forwards;
 }
 
-.wrappedText {
-  /* border: 2px solid magenta; */
-  color: white;
+.gag {
+  height: 50px;
 }
 
-.links {
+/* .wrappedText {
+  border: 2px solid magenta;
+  color: white;
+} */
+
+/* .links {
   color: #4b18d9;
   margin: 5px;
-}
+} */
 
 @keyframes rotate {
   0% {transform: rotate(0)}

@@ -45,7 +45,7 @@ const HamburgerMenu = (props) => {
           </Link>
           <Link
             className={styles.links}
-            to='/account'
+            to='/register'
             onClick={onClickLink}
           >
             {props.dictionary.headerCreateAccount}
