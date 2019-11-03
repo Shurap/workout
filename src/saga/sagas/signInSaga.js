@@ -19,7 +19,7 @@ function* doSignInSaga({ data, history }) {
   }
 }
 
-function* getWholeUserSaga(history) {
+export function* getWholeUserSaga(history) {
   try {
     const ref = firebase.db.ref(`user/${firebase.auth.currentUser.uid}`);
     const snapshot = yield ref.once('value');

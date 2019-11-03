@@ -4,6 +4,7 @@ import PageHome from '../PageHome';
 import PageDiary from '../PageDiary';
 import PageLogIn from '../PageLogIn';
 import PageRegister from '../PageRegister';
+import PageSignOut from '../PageSignOut'
 
 const Router = () => (
   <div>
@@ -12,6 +13,7 @@ const Router = () => (
     <Route path='/diary' component={PageDiary} />
     <Route path='/login' component={PageLogIn} />
     <Route path='/register' component={PageRegister} />
+    <Route path='/signout' component={PageSignOut} />
   </div>
 
 );

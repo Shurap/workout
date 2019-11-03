@@ -50,6 +50,13 @@ const HamburgerMenu = (props) => {
           >
             {props.dictionary.headerCreateAccount}
           </Link>
+          <Link
+            className={styles.links}
+            to='/signout'
+            onClick={onClickLink}
+          >
+            {props.dictionary.headerSignOut}
+          </Link>
         </div>
       </div>
       <div className={styles.gag}>

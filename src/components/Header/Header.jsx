@@ -18,6 +18,7 @@ const Header = (props) => {
           <Link className={styles.links} to='/diary'>{props.dictionary.headerDiary}</Link>
           <Link className={styles.links} to='/login'>{props.dictionary.headerLogin}</Link>
           <Link className={styles.links} to='/register'>{props.dictionary.headerCreateAccount}</Link>
+          <Link className={styles.links} to='/signout'>{props.dictionary.headerSignOut}</Link>
         </div>
         <div className={styles.gag}></div>
         <SwitcherLang />
