@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Svg.module.css';
 
-const SvgUser = () => {
+const SvgUser = (props) => {
+
   return (
     <div className={styles.wrapperSvg}>
       <svg className={styles.svg} x="0px" y="0px" viewBox="-255 347 100 100" height="40px" width="40px">

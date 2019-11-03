@@ -1,15 +1,25 @@
 import React from 'react';
 import styles from './AuthUser.module.css';
-import SvgUser from '../common/svg/SvgUser';
+import SvgAuthUser from '../common/svg/SvgAuthUser';
+import { connect } from "react-redux";
 
 
 const AuthUser = (props) => {
 
   return (
     <div className={styles.authUser}>
-      <SvgUser />
+    {props.currentUserName ? <SvgAuthUser color='white' /> : <div className={styles.changerPicture}></div>}
+      <div className={styles.wrapperText}>
+        {/* {props.authStatus ? (<p>{props.currentUserName ? props.currentUserName : 'Username...'}</p>) : null} */}
+        {props.currentUserName ? props.currentUserName : '.Username.'}
+      </div>
     </div>
   )
 }
 
-export default AuthUser;
+const mapStateToProps = (state) => ({
+  currentUserName: state.currentUser.username,
+  authStatus: state.authStatus.authStatus
+});
+
+export default connect(mapStateToProps)(AuthUser);
