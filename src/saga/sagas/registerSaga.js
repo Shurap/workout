@@ -1,9 +1,7 @@
 import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
 import { DO_REGISTER } from '../../redux/constants';
 import { firebase } from '../../firebase/firebase';
-import { getWholeUserSaga } from './signInSaga';
 import { loadingBeginToStore, loadingEndToStore } from '../../redux/actions/actionLoading';
-import { changeAuthStatusInStore } from '../../redux/actions/actionAuthStatus';
 import { addErrorToStore } from '../../redux/actions/actionError';
 import { doSignIn } from '../../redux/actions/actionSignIn';
 

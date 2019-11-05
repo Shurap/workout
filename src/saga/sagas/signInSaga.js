@@ -10,7 +10,7 @@ import { firebase } from '../../firebase/firebase';
 function* doSignInSaga({ data, history }) {
   try {
     yield put(loadingBeginToStore());
-    const authUser = yield firebase.doSignInWithEmailAndPassword(data.email, data.password);
+    const authUser = yield firebase.auth.signInWithEmailAndPassword(data.email, data.password);
     yield put(changeAuthStatusInStore(!!authUser));
     yield getWholeUserSaga(history);
   } catch (error) {

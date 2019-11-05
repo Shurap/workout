@@ -1,5 +1,6 @@
 import {
-  ADD_AUTH_USER_DATA_TO_STORE
+  ADD_AUTH_USER_DATA_TO_STORE,
+  CLEAR_AUTH_USER_DATA_FROM_STORE
 } from '../constants';
 import { merge } from 'ramda';
 
@@ -10,6 +11,9 @@ function currentUser(state = initialState, action) {
 
     case ADD_AUTH_USER_DATA_TO_STORE:
       return merge(state, action.data);
+
+    case CLEAR_AUTH_USER_DATA_FROM_STORE:
+      return (state = initialState);
 
     default:
       return state;
