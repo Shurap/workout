@@ -1,9 +1,13 @@
 import React from 'react';
 import ListExercises from './ListExercises';
+import AddNewExercise from './AddNewExercise';
 
 const BlockListExercise = () => {
   return (
-    <ListExercises />
+    <div>
+      <AddNewExercise />
+      <ListExercises />
+    </div>
   )
 }
 
