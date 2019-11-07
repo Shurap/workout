@@ -1,14 +1,40 @@
 import React from 'react';
 import ListExercises from './ListExercises';
-import AddNewExercise from './AddNewExercise';
+import Search from './Search';
+import withTranslator from '../../../hocs/withTranslator/withTranslator';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import {
+  changeVisibleWindowNewExerciseToStore,
+} from '../../../redux/actions/actionWindowNewExercise';
 
-const BlockListExercise = () => {
+const BlockListExercise = (props) => {
+
+  const onClick = () => {
+    // props.changeVisibleWindowNewExerciseToStore(!props.windowVisible)
+    props.changeVisibleWindowNewExerciseToStore(true);
+
+  }
+
   return (
     <div>
-      <AddNewExercise />
+      
+      <button
+        /*className={styles.button}*/
+        onClick={onClick}
+      >
+        {props.dictionary.blockExercisesNew}
+      </button>
+      <Search />
       <ListExercises />
     </div>
   )
 }
 
-export default BlockListExercise;
+const mapStateToProps = (state) => ({ windowVisible: state.windowNewExercise.visible });
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  changeVisibleWindowNewExerciseToStore,
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslator(BlockListExercise));

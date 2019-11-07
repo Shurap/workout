@@ -11,6 +11,7 @@ import { withRouter } from 'react-router-dom';
 import Spinner from '../common/Spinner';
 
 const LogIn = (props) => {
+  
   const onSubmit = (data) => {
     props.doSignIn(data, props.history);
   }
