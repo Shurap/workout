@@ -1,0 +1,6 @@
+.blockTraining {
+  border: 5px solid green;
+  /* width: 100px;
+  height: 100px; */
+  flex-grow: 1;
+}

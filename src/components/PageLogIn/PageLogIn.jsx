@@ -17,7 +17,7 @@ const LogIn = (props) => {
   }
 
   return (
-    <div className={styles.logIn}>
+    <div className={styles.pageLogIn}>
       <div className={styles.window}>
         <SvgBarbell />
         <FormLogInRedux onSubmit={onSubmit} />

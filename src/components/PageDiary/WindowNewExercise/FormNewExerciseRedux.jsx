@@ -8,6 +8,7 @@ import ImageExercise from './ImageExercise';
 import { connect } from 'react-redux';
 import { addGroupImageToStore } from '../../../redux/actions/actionWindowNewExercise';
 import { bindActionCreators } from 'redux';
+import SvgPencil from '../../common/svg/SvgPencil';
 
 
 const FormNewExercise = (props) => {
@@ -17,65 +18,70 @@ const FormNewExercise = (props) => {
   }
 
   return (
-    <form className={styles.FormNewExercise} onSubmit={props.handleSubmit}>
+    <form className={styles.formNewExercise} onSubmit={props.handleSubmit}>
+
+
+
+
+      <div className={styles.wrapperBlockSelect}>
+        <ImageExercise />
+        <Field
+          className={styles.select}
+          component={RenderSelectField}
+          name='group'
+          onChange={onChange}
+          // validate={[requiredWithText, emailTrueText]}
+          // placeholder={props.dictionary.email}
+          autoComplete="off"
+        >
+          <option value="None">{props.dictionary.muscleNone}</option>
+          <option value="Abd">{props.dictionary.muscleAbd}</option>
+          <option value="Biceps">{props.dictionary.muscleBiceps}</option>
+          <option value="Calves">{props.dictionary.muscleCalves}</option>
+          <option value="Chest">{props.dictionary.muscleChest}</option>
+          <option value="Glutes">{props.dictionary.muscleGlutes}</option>
+          <option value="Hamstrings">{props.dictionary.muscleHamstrings}</option>
+          <option value="Lats">{props.dictionary.muscleLats}</option>
+          <option value="Lowerback">{props.dictionary.muscleLowerback}</option>
+          <option value="MiddleBack">{props.dictionary.muscleMiddleBack}</option>
+          <option value="Neck">{props.dictionary.muscleNeck}</option>
+          <option value="Quads">{props.dictionary.muscleQuads}</option>
+          <option value="Shoulders">{props.dictionary.muscleShoulders}</option>
+          <option value="Traps">{props.dictionary.muscleTraps}</option>
+          <option value="Triceps">{props.dictionary.muscleTriceps}</option>
+        </Field>
+      </div>
+
 
       <div className={styles.wrapperBlockInput}>
-        <ImageExercise />
-
-        <div className={styles.wrapperInput}>
-          <Field
-            className={styles.textInput}
-            component={RenderSelectField}
-            name='group'
-            onChange={onChange}
-            // validate={[requiredWithText, emailTrueText]}
-            // placeholder={props.dictionary.email}
-            autoComplete="off"
-          >
-            <option value="None">{props.dictionary.muscleNone}</option>
-            <option value="Abd">{props.dictionary.muscleAbd}</option>
-            <option value="Biceps">{props.dictionary.muscleBiceps}</option>
-            <option value="Calves">{props.dictionary.muscleCalves}</option>
-            <option value="Chest">{props.dictionary.muscleChest}</option>
-            <option value="Glutes">{props.dictionary.muscleGlutes}</option>
-            <option value="Hamstrings">{props.dictionary.muscleHamstrings}</option>
-            <option value="Lats">{props.dictionary.muscleLats}</option>
-            <option value="Lowerback">{props.dictionary.muscleLowerback}</option>
-            <option value="MiddleBack">{props.dictionary.muscleMiddleBack}</option>
-            <option value="Neck">{props.dictionary.muscleNeck}</option>
-            <option value="Quads">{props.dictionary.muscleQuads}</option>
-            <option value="Shoulders">{props.dictionary.muscleShoulders}</option>
-            <option value="Traps">{props.dictionary.muscleTraps}</option>
-            <option value="Triceps">{props.dictionary.muscleTriceps}</option>
-          </Field>
-        </div>
-
+        <SvgPencil />
         <div className={styles.wrapperInput}>
           <Field
             className={styles.textInput}
             component={RenderTextField}
             name='name'
             // validate={[requiredWithText, emailTrueText]}
-            placeholder={props.dictionary.email}
+            placeholder={props.dictionary.windowNewExerciseEdit}
             autoComplete="off"
           />
         </div>
       </div>
 
       <div className={styles.wrapperBlockInput}>
+        <SvgPencil />
         <div className={styles.wrapperInput}>
           <Field
-            className={styles.textInput}
+            className={styles.textAreaInput}
             component="textarea"
             name='notes'
             // validate={[requiredWithText, minLengthwithText]}
-            placeholder={props.dictionary.password}
+            placeholder={props.dictionary.windowNewExerciseArea}
             autoComplete="off"
           />
         </div>
       </div>
 
-      <button className={styles.buttonLogIn}>{props.dictionary.logIn}</button>
+      <button className={styles.button}>{props.dictionary.windowNewExerciseButtonSave}</button>
 
     </form>
   )

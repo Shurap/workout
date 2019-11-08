@@ -3,28 +3,38 @@ import styles from './WindowNewExercise.module.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FormNewExerciseRedux from './FormNewExerciseRedux';
-// import imgShoulders from '../../../images/shoulders.png';
-// import { clearErrorFromStore } from '../../redux/actions/actionError';
+import { changeVisibleWindowNewExerciseToStore } from '../../../redux/actions/actionWindowNewExercise';
+import withTranslator from '../../../hocs/withTranslator/withTranslator';
+import { withRouter } from 'react-router-dom';
+import { doAddNewExercise } from '../../../redux/actions/actionWindowNewExercise';
 
 const WindowNewExercise = (props) => {
 
-  // const handleClick = () => {
-  //   props.clearErrorFromStore();
-  // }
-  
   const onSubmit = (data) => {
-    console.log('submit', data);
+    props.doAddNewExercise(data, props.history);
+  }
+
+  const onClick = () => {
+    props.changeVisibleWindowNewExerciseToStore(false)
   }
 
   return (
-    <div className={(props.windowVisible) ? styles.windowNewExerciseVisible : styles.windowNewExerciseHide}>
-      {/* <img src={imgShoulders}></img> */}
-      {/* <select>
-        <option value='en'>shoulders</option>
-        <option value='ru'>triceps</option>
-      </select> */}
-      <FormNewExerciseRedux onSubmit={onSubmit}/>
-    </div>
+    <div
+      className={(props.windowVisible) ?
+        styles.windowNewExerciseVisible : styles.windowNewExerciseHide}
+    >
+      <div className={styles.window}>
+        <FormNewExerciseRedux onSubmit={onSubmit} />
+        <div className={styles.wrapperButton}>
+          <button
+            className={styles.button}
+            onClick={onClick}
+          >
+            {props.dictionary.windowNewExerciseCancel}
+          </button>
+        </div>
+      </div>
+    </div >
   )
 }
 
@@ -33,7 +43,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  // clearErrorFromStore
+  changeVisibleWindowNewExerciseToStore,
+  doAddNewExercise
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(WindowNewExercise);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(withTranslator(WindowNewExercise)));

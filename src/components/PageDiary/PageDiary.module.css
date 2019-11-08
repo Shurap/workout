@@ -1,4 +1,19 @@
 .pageDiary {
-  /* border: 2px solid red; */
-  margin-top: 70px;
+    border: 5px solid red;
+    margin-top: 70px;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    background-image: url('../../images/fitness-bright.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapperBlocks {
+    border: 5px solid yellow;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }

@@ -25,7 +25,7 @@ const dictionary = {
     erroremailTrue: 'Invalid email address',
     errormaxLength: 'Must be less than 10 characters',
     blockExercisesSearch: 'Search',
-    blockExercisesNew: 'New exercises',
+    blockExercisesNew: 'Add new exercise',
     muscleNone: 'None',
     muscleAbd: 'Abdominal',
     muscleBiceps: 'Biceps',
@@ -41,6 +41,10 @@ const dictionary = {
     muscleShoulders: 'Shoulders',
     muscleTraps: 'Traps',
     muscleTriceps: 'Triceps',
+    windowNewExerciseCancel: 'Cancel',
+    windowNewExerciseEdit: 'Name',
+    windowNewExerciseArea: 'Notes',
+    windowNewExerciseButtonSave: 'Save',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -85,6 +89,10 @@ const dictionary = {
     muscleShoulders: 'Плечи',
     muscleTraps: 'Дельты',
     muscleTriceps: 'Трицепс',
+    windowNewExerciseCancel: 'Отмена',
+    windowNewExerciseEdit: 'Название',
+    windowNewExerciseArea: 'Заметки',
+    windowNewExerciseButtonSave: 'Сохранить',
   }
 }
 
