@@ -15,7 +15,7 @@ const WindowNewExercise = (props) => {
   }
 
   const onClick = () => {
-    props.changeVisibleWindowNewExerciseToStore(false)
+    props.changeVisibleWindowNewExerciseToStore(false);
   }
 
   return (

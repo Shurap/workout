@@ -26,7 +26,7 @@ const dictionary = {
     errormaxLength: 'Must be less than 10 characters',
     blockExercisesSearch: 'Search',
     blockExercisesNew: 'Add new exercise',
-    muscleNone: 'None',
+    muscleNone: 'No group',
     muscleAbd: 'Abdominal',
     muscleBiceps: 'Biceps',
     muscleCalves: 'Calves',

@@ -35,7 +35,7 @@ const withImages = (Component) => {
       'Shoulders': imgShoulders,
       'Traps': imgTraps,
       'Triceps': imgTriceps,
-      'None': imgNone,
+      'No group': imgNone,
     }
 
     return <Component {...props} imageShow={imageShow} />

@@ -75,3 +75,15 @@
   border: none;
   border-radius: 20px;
 }
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-color: #551bf5;
+}
+
+.button:active {
+  background-color: #3f13ba;
+}

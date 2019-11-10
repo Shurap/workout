@@ -34,7 +34,7 @@ const FormNewExercise = (props) => {
           // placeholder={props.dictionary.email}
           autoComplete="off"
         >
-          <option value="None">{props.dictionary.muscleNone}</option>
+          <option value="No group">{props.dictionary.muscleNone}</option>
           <option value="Abd">{props.dictionary.muscleAbd}</option>
           <option value="Biceps">{props.dictionary.muscleBiceps}</option>
           <option value="Calves">{props.dictionary.muscleCalves}</option>
