@@ -5,25 +5,25 @@ import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { changeVisibleWindowNewExerciseToStore } from '../../../redux/actions/actionWindowNewExercise';
-import styles from './BlockListExercises.module.css'; 
+import styles from './BlockListExercises.module.css';
 
 const BlockListExercise = (props) => {
 
   const onClick = () => {
-    // props.changeVisibleWindowNewExerciseToStore(!props.windowVisible)
     props.changeVisibleWindowNewExerciseToStore(true);
 
   }
 
   return (
     <div className={styles.blockListExercises}>
-      
-      <button
-        /*className={styles.button}*/
-        onClick={onClick}
-      >
-        {props.dictionary.blockExercisesNew}
-      </button>
+      <div className={styles.wrapperButton}>
+        <button
+          className={styles.button}
+          onClick={onClick}
+        >
+          {props.dictionary.blockExercisesNew}
+        </button>
+      </div>
       <Search />
       <ListExercises />
     </div>

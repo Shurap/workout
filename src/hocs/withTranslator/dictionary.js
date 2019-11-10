@@ -45,6 +45,13 @@ const dictionary = {
     windowNewExerciseEdit: 'Name',
     windowNewExerciseArea: 'Notes',
     windowNewExerciseButtonSave: 'Save',
+    panelButtonCancel: 'Cancel',
+    panelButtonDelete: 'Delete',
+    panelButtonAdd: 'Add',
+    panelButtonInfo: 'Info',
+    panelButtonYes: 'Yes',
+    panelButtonNo: 'No',
+    panelButtonQuestion: 'Are you sure?',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -93,6 +100,13 @@ const dictionary = {
     windowNewExerciseEdit: 'Название',
     windowNewExerciseArea: 'Заметки',
     windowNewExerciseButtonSave: 'Сохранить',
+    panelButtonCancel: 'Отмена',
+    panelButtonDelete: 'Удалить',
+    panelButtonAdd: 'Добавить',
+    panelButtonInfo: 'Инфо',
+    panelButtonYes: 'Да',
+    panelButtonNo: 'Нет',
+    panelButtonQuestion: 'Вы уверены?',
   }
 }
 

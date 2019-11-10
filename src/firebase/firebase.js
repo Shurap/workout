@@ -79,10 +79,10 @@ class Firebase {
   //     return result;
   //   }
 
-  //   deleteExerciseFromBase = (nameExercise) => {
-  //     const ref = this.db.ref(`user/${this.auth.currentUser.uid}/exercises/${nameExercise}`);
-  //     ref.remove();
-  //   }
+    deleteExerciseFromBase = (nameExercise) => {
+      const ref = this.db.ref(`user/${this.auth.currentUser.uid}/exercises/${nameExercise}`);
+      ref.remove();
+    }
 
   //   findAndReplace = async (exerciseNameModal, exerciseNewNameModal) => {
   //     const ref = this.db.ref(`user/${this.auth.currentUser.uid}/schedule/`);

@@ -13,9 +13,9 @@ const Search = (props) => {
   }
 
   return (
-    <div>
+    <div className={styles.search}>
       <input
-        // className='form-control'
+        className={styles.textInput}
         type='text'
         onChange={onChange}
         value={props.searchLabel}

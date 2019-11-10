@@ -3,6 +3,7 @@ import styles from './ListExercises.module.css';
 import { connect } from 'react-redux';
 import Exercise from './Exercise';
 import { getExercisesFromStore } from '../../../selectors';
+import withImage from '../../../hocs/withImage/withImage';
 
 const ListExercises = (props) => {
 
@@ -10,14 +11,15 @@ const ListExercises = (props) => {
     return (
       <div key={index}>
         <Exercise
-          label={element}
+          image={element[1]}
+          label={element[0]}
         />
       </div>
     );
   });
 
   return (
-    <div>
+    <div className={styles.listExercises}>
       {arrayExercises}
     </div>
   )
@@ -27,4 +29,4 @@ const mapStateToProps = (state) => ({
   currentListExercises: getExercisesFromStore(state),
 });
 
-export default connect(mapStateToProps)(ListExercises);
+export default connect(mapStateToProps)(withImage(ListExercises));

@@ -1,0 +1,21 @@
+.search {
+  /* display: flex;
+  justify-content: center; */
+  background-color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 5px;
+  /* height: 70px; */
+}
+
+.textInput {
+  color: white;
+  background-color: transparent;
+  border-right: 1px solid gray;
+  border-top: none;
+  border-bottom: 1px solid gray;
+  border-left: none;
+  border-radius: 0 5px 0 0;
+  text-align: left;
+  font-size: 16px;
+  margin: 25px 10px 25px 10px;
+  height: 20px;
+} 

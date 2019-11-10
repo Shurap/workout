@@ -1,0 +1,7 @@
+.listExercises {
+  /* border: 2px solid magenta; */
+  background-color: rgba(0, 0, 0, 0.85);
+  flex-grow: 1;
+  /* overflow-y: scroll; */
+  overflow-y: auto;
+}
