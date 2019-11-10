@@ -6,6 +6,7 @@ import imgArrowForward from '../../../images/arrowForward.png';
 import imgInfo from '../../../images/info.png';
 import imgDelete from '../../../images/delete.png';
 import imgCancel from '../../../images/cancel.png';
+import imgCheck from '../../../images/check.png';
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { doDeleteExercise } from '../../../redux/actions/actionCurrentUser';
 import { connect } from 'react-redux';
@@ -46,7 +47,7 @@ const Exercise = (props) => {
 
           <div className={styles.buttonDiv} onClick={onDeleteConfirm}>
             {props.dictionary.panelButtonYes}
-            <img src={imgCancel} alt="" />
+            <img src={imgCheck} alt="" />
           </div>
 
           <div className={styles.buttonDiv} onClick={onClickButton}>

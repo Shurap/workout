@@ -2,8 +2,10 @@ import { createSelector } from 'reselect';
 import * as R from 'ramda';
 
 export const getExercisesFromStore = createSelector(
-  (state) => state.currentUser.exercises, (state) => state.searchLabel.searchLabel,
-  (exercises, searchLabel) => {
+  (state) => state.currentUser.exercises,
+  (state) => state.search.searchLabel,
+  (state) => state.search.selectLabel,
+  (exercises, searchLabel, selectLabel) => {
 
     const arrayExercises = R.toPairs(exercises);
 
@@ -15,6 +17,17 @@ export const getExercisesFromStore = createSelector(
       return element[0].toLowerCase().indexOf(searchLabel.toLowerCase()) > -1
     });
 
-    return exitExercisesWithSearch;
+    if (selectLabel === 'All group') {
+      const exitExercisesWithSearchSelect = exitExercisesWithSearch;
+      return exitExercisesWithSearchSelect
+    } else {
+      const exitExercisesWithSearchSelect = exitExercisesWithSearch.filter((element) => {
+        return element[1].toLowerCase().indexOf(selectLabel.toLowerCase()) > -1
+      });
+      return exitExercisesWithSearchSelect;
+    }
+
+
+    // return exitExercisesWithSearchSelect;
   }
 );

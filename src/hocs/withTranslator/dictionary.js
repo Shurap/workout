@@ -52,6 +52,7 @@ const dictionary = {
     panelButtonYes: 'Yes',
     panelButtonNo: 'No',
     panelButtonQuestion: 'Are you sure?',
+    buttonClear: 'Clear',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -107,6 +108,7 @@ const dictionary = {
     panelButtonYes: 'Да',
     panelButtonNo: 'Нет',
     panelButtonQuestion: 'Вы уверены?',
+    buttonClear: 'Очистить',
   }
 }
 

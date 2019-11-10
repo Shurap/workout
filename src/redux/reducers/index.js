@@ -4,7 +4,7 @@ import error from './reducerError';
 import authStatus from './reducerAuthStatus';
 import currentUser from './reducerCurrentUser';
 import loading from './reducerLoading';
-import searchLabel from './reducerSearch'
+import search from './reducerSearch'
 import windowNewExercise from './reducerWindowNewExercises';
 import {reducer as formReducer} from 'redux-form';
 
@@ -14,7 +14,7 @@ const reducers = combineReducers({
   authStatus,
   currentUser,
   loading,
-  searchLabel,
+  search,
   windowNewExercise,
   form: formReducer
 });

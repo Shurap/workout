@@ -1,10 +1,11 @@
 .blockListExercises {
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
 }
 
 .wrapperButton {
+  /* border: 2px solid greenyellow; */
   background-color: rgba(0, 0, 0, 0.85);
   margin-bottom: 5px;
 }

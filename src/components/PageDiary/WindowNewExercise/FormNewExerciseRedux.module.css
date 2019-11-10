@@ -56,6 +56,10 @@
   background: rgba(0, 0, 0, 0.85);
 }
 
+.select:focus {
+  outline: none;
+}
+
 .wrapperBlockInput {
   /* border: 2px solid goldenrod; */
   display: flex;
