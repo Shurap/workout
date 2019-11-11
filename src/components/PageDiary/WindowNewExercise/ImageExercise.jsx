@@ -70,7 +70,7 @@ const ImageExercise = (props) => {
 
   return (
     <div className={styles.imageExercise}>
-      <img className={styles.image} src={imageShow()} />
+      <img className={styles.image} src={imageShow()} alt="" />
     </div>
   )
 }

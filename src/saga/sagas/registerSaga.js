@@ -1,4 +1,4 @@
-import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { DO_REGISTER } from '../../redux/constants';
 import { firebase } from '../../firebase/firebase';
 import { loadingBeginToStore, loadingEndToStore } from '../../redux/actions/actionLoading';
@@ -22,5 +22,5 @@ function* doRegisterSaga({ data, history }) {
 
 
 export function* registerSaga() {
-  yield takeLatest(DO_REGISTER, doRegisterSaga);
+  yield takeEvery(DO_REGISTER, doRegisterSaga);
 }

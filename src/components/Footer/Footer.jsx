@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.wrapperMail}>
         <div className={styles.wrapperImageMail}>
-          <img className={styles.imageMail} src={mail}></img>
+          <img className={styles.imageMail} src={mail} alt=""></img>
         </div>
         <div className={styles.wrapperTextMail}>
           2621754@mail.ru
@@ -17,7 +17,7 @@ const Footer = () => {
 
       <div className={styles.wrapperLinked}>
         <div className={styles.wrapperImageLinked}>
-          <img className={styles.imageLinked} src={linked}></img>
+          <img className={styles.imageLinked} src={linked} alt=""></img>
         </div>
         <div className={styles.wrapperTextLinked}>
           linkedin.com/in/aliaksandr-bahaslauchyk-649b83174

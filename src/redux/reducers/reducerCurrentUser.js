@@ -4,7 +4,7 @@ import {
   ADD_NEW_EXERCISE_TO_STORE,
   DELETE_EXERCISE_FROM_STORE
 } from '../constants';
-import { merge, dissoc } from 'ramda';
+import { merge } from 'ramda';
 
 const initialState = {};
 
@@ -18,7 +18,6 @@ function currentUser(state = initialState, action) {
       return (state = initialState);
 
     case ADD_NEW_EXERCISE_TO_STORE:
-      // return merge(state.exercises, action.data);
       return { ...state, exercises: { ...state.exercises, ...action.data } }
 
     case DELETE_EXERCISE_FROM_STORE:

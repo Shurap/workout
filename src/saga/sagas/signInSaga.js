@@ -1,4 +1,4 @@
-import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { DO_SIGN_IN } from '../../redux/constants';
 import { addErrorToStore } from '../../redux/actions/actionError';
 import { changeAuthStatusInStore } from '../../redux/actions/actionAuthStatus';
@@ -34,5 +34,5 @@ export function* getWholeUserSaga(history) {
 }
 
 export function* signInSaga() {
-  yield takeLatest(DO_SIGN_IN, doSignInSaga);
+  yield takeEvery(DO_SIGN_IN, doSignInSaga);
 }

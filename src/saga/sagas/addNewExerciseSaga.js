@@ -1,4 +1,4 @@
-import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { DO_ADD_NEW_EXERCISE } from '../../redux/constants';
 import { firebase } from '../../firebase/firebase';
 import { loadingBeginToStore, loadingEndToStore } from '../../redux/actions/actionLoading';
@@ -31,5 +31,5 @@ function* doAddNewExerciseSaga({ data, history }) {
 }
 
 export function* addNewExerciseSaga() {
-  yield takeLatest(DO_ADD_NEW_EXERCISE, doAddNewExerciseSaga);
+  yield takeEvery(DO_ADD_NEW_EXERCISE, doAddNewExerciseSaga);
 }

@@ -1,5 +1,5 @@
 import { DO_DELETE_EXERCISE } from "../../redux/constants";
-import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { firebase } from '../../firebase/firebase';
 import { loadingBeginToStore, loadingEndToStore } from '../../redux/actions/actionLoading';
 import { addErrorToStore } from '../../redux/actions/actionError';
@@ -22,5 +22,5 @@ function* doDeleteExerciseSaga({ data }) {
 
 
   export function* deleteExerciseSaga() {
-    yield takeLatest(DO_DELETE_EXERCISE, doDeleteExerciseSaga);
+    yield takeEvery(DO_DELETE_EXERCISE, doDeleteExerciseSaga);
   }

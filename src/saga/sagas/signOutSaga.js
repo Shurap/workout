@@ -1,5 +1,5 @@
 import { DO_SIGN_OUT } from "../../redux/constants";
-import { takeLatest, takeEvery, take, put } from 'redux-saga/effects';
+import { takeEvery, put } from 'redux-saga/effects';
 import { loadingBeginToStore, loadingEndToStore } from '../../redux/actions/actionLoading';
 import { clearAuthUserDataFromStore } from '../../redux/actions/actionCurrentUser';
 import { changeAuthStatusInStore } from '../../redux/actions/actionAuthStatus';
@@ -21,5 +21,5 @@ function* doSignOutSaga({ history }) {
 }
 
 export function* signOutSaga() {
-  yield takeLatest(DO_SIGN_OUT, doSignOutSaga);
+  yield takeEvery(DO_SIGN_OUT, doSignOutSaga);
 }

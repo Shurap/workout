@@ -12,7 +12,7 @@ const Header = (props) => {
   return (
     <div className={styles.header}>
       <div className={styles.wrappingContent}>
-        <img className={styles.image} src={logo}></img>
+        <img className={styles.image} src={logo} alt=""></img>
         <div className={styles.wrapperLinks}>
           <Link className={styles.links} to='/home'>{props.dictionary.headerHome}</Link>
           <Link className={styles.links} to='/diary'>{props.dictionary.headerDiary}</Link>

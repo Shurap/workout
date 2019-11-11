@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import styles from './FormNewExerciseRedux.module.css';
 import { Field, reduxForm } from 'redux-form'
 import withTranslator from '../../../hocs/withTranslator/withTranslator';

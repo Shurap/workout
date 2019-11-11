@@ -13,7 +13,7 @@ const Article = (props) => {
         <p>{props.text}</p>
       </div>
       <div className={styles.wrapperImage}>
-        <img className={styles.image} src={props.image}></img>
+        <img className={styles.image} src={props.image} alt=""></img>
       </div>
     </div>
   )

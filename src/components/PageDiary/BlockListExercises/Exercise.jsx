@@ -99,6 +99,7 @@ const Exercise = (props) => {
       <img
         className={styles.image}
         src={props.imageShow[props.image]}
+        alt=""
       ></img>
       <div className={styles.wrapperText}>
         {props.label}
