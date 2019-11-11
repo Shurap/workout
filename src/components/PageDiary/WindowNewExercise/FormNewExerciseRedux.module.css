@@ -29,6 +29,10 @@
   height: 100px;
 }
 
+.textAreaInput:focus {
+  outline: none;
+}
+
 .wrapperBlockSelect {
   /* border: 1px solid red; */
   display: flex;

@@ -21,8 +21,8 @@ class Firebase {
   // doCreateUserWithEmailAndPassword = (email, password) =>
   //   this.auth.createUserWithEmailAndPassword(email, password);
 
-  doSignInWithEmailAndPassword = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+  // doSignInWithEmailAndPassword = (email, password) =>
+  //   this.auth.signInWithEmailAndPassword(email, password);
 
   //   doSignOut = () => this.auth.signOut();
 
@@ -35,10 +35,10 @@ class Firebase {
   //     return result;
   //   }
 
-  updateDataToBase = (pathInBase, data) => {
-    const ref = this.db.ref(`user/${this.auth.currentUser.uid}/${pathInBase}`);
-    ref.update(data);
-  }
+  // updateDataToBase = (pathInBase, data) => {
+  //   const ref = this.db.ref(`user/${this.auth.currentUser.uid}/${pathInBase}`);
+  //   ref.update(data);
+  // }
 
   //   setDataToBase = (pathInBase, data) => {
   //     const ref = this.db.ref(`user/${this.auth.currentUser.uid}/${pathInBase}`);

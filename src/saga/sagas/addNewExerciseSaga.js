@@ -7,23 +7,28 @@ import { addNewExerciseToStore } from '../../redux/actions/actionCurrentUser';
 import { changeVisibleWindowNewExerciseToStore } from '../../redux/actions/actionWindowNewExercise';
 
 function* doAddNewExerciseSaga({ data, history }) {
-    try {
-      yield put(loadingBeginToStore());
-      const sendData = {
-        [data.name]: {
-          date: data.group,
-          data: data.notes
-        }
+  try {
+    yield put(loadingBeginToStore());
+    const sendData = {
+      [data.name]: {
+        date: (data.group) ? data.group : 'No group',
+        data: (data.notes) ? data.notes : ''
       }
-      yield firebase.updateDataToBase('exercises', sendData);
-      yield put(addNewExerciseToStore(sendData));
-      yield put(loadingEndToStore());
-      yield put(changeVisibleWindowNewExerciseToStore(false));
-    } catch (error) {
-      yield put(loadingEndToStore());
-      yield put(addErrorToStore(error));
     }
+
+    console.log(sendData)
+
+    const ref = yield firebase.db.ref(`user/${firebase.auth.currentUser.uid}/exercises`);
+    yield ref.update(sendData);
+    // yield firebase.updateDataToBase('exercises', sendData);
+    yield put(addNewExerciseToStore(sendData));
+    yield put(loadingEndToStore());
+    yield put(changeVisibleWindowNewExerciseToStore(false));
+  } catch (error) {
+    yield put(loadingEndToStore());
+    yield put(addErrorToStore(error));
   }
+}
 
 export function* addNewExerciseSaga() {
   yield takeLatest(DO_ADD_NEW_EXERCISE, doAddNewExerciseSaga);

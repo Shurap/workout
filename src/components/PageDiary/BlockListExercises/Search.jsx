@@ -39,7 +39,7 @@ const Search = (props) => {
             onChange={onChangeSelect}
             value={props.selectLabel}
           >
-            <option value="All group">All group</option>
+            <option value="All group">{props.dictionary.muscleAllGroup}</option>
             <option value="No group">{props.dictionary.muscleNone}</option>
             <option value="Abd">{props.dictionary.muscleAbd}</option>
             <option value="Biceps">{props.dictionary.muscleBiceps}</option>

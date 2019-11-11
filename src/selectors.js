@@ -9,6 +9,13 @@ export const getExercisesFromStore = createSelector(
 
     const arrayExercises = R.toPairs(exercises);
 
+    // sort
+    arrayExercises.sort((a, b) => {
+      if (a[0].toLowerCase() > b[0].toLowerCase()) return 1;
+      if (a[0].toLowerCase() < b[0].toLowerCase()) return -1;
+      return 0;
+    });
+
     const exitExercises = arrayExercises.map((element) => {
       return [element[0], element[1].date]
     });
@@ -19,15 +26,12 @@ export const getExercisesFromStore = createSelector(
 
     if (selectLabel === 'All group') {
       const exitExercisesWithSearchSelect = exitExercisesWithSearch;
-      return exitExercisesWithSearchSelect
+      return exitExercisesWithSearchSelect;
     } else {
       const exitExercisesWithSearchSelect = exitExercisesWithSearch.filter((element) => {
         return element[1].toLowerCase().indexOf(selectLabel.toLowerCase()) > -1
       });
       return exitExercisesWithSearchSelect;
     }
-
-
-    // return exitExercisesWithSearchSelect;
   }
 );

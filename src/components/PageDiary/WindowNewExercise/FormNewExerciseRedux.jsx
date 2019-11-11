@@ -20,9 +20,6 @@ const FormNewExercise = (props) => {
   return (
     <form className={styles.formNewExercise} onSubmit={props.handleSubmit}>
 
-
-
-
       <div className={styles.wrapperBlockSelect}>
         <ImageExercise />
         <Field
@@ -30,6 +27,8 @@ const FormNewExercise = (props) => {
           component={RenderSelectField}
           name='group'
           onChange={onChange}
+          // defaultValue="adsafdsf"
+          // selectedvalue='No group'
           // validate={[requiredWithText, emailTrueText]}
           // placeholder={props.dictionary.email}
           autoComplete="off"

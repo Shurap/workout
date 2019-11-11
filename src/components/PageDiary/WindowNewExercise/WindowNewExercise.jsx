@@ -11,6 +11,7 @@ import { doAddNewExercise } from '../../../redux/actions/actionWindowNewExercise
 const WindowNewExercise = (props) => {
 
   const onSubmit = (data) => {
+    // console.log(data)
     props.doAddNewExercise(data, props.history);
   }
 
