@@ -6,6 +6,7 @@ import currentUser from './reducerCurrentUser';
 import loading from './reducerLoading';
 import search from './reducerSearch'
 import windowNewExercise from './reducerWindowNewExercises';
+import visibleListExercises from './reducerVisibleListExercises';
 import {reducer as formReducer} from 'redux-form';
 
 const reducers = combineReducers({
@@ -16,6 +17,7 @@ const reducers = combineReducers({
   loading,
   search,
   windowNewExercise,
+  visibleListExercises,
   form: formReducer
 });
 

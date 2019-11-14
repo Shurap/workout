@@ -1,19 +1,25 @@
-.blockListExercises {
-  border: 5px solid blue;
+.blockListExercisesVisible {
+  /* border: 5px solid blue; */
   display: flex;
   flex-direction: column;
   /* -webkit-transition: width 0.9s; */
   width: 260px;
   overflow: hidden;
-  transition: width 1s;
-  /* width: 50px;
-  overflow: hidden; */
+  transition: width 0.5s;
 }
 
-.blockListExercises:hover {
+.blockListExercisesHide {
+  display: flex;
+  flex-direction: column;
   width: 0px;
   overflow: hidden;
+  transition: width 0.5s;
 }
+
+/* .blockListExercises:hover {
+  width: 0px;
+  overflow: hidden;
+} */
 
 .wrapperButton {
   /* border: 2px solid greenyellow; */

@@ -1,4 +1,12 @@
 .blockTraining {
+  display: flex;
+  flex-direction: column;
   /* border: 5px solid green; */
   flex-grow: 1;
+}
+
+.wrapperBlock {
+  border: 2px solid red;
+  flex-grow: 1;
+
 }

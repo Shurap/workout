@@ -11,11 +11,10 @@ const BlockListExercise = (props) => {
 
   const onClick = () => {
     props.changeVisibleWindowNewExerciseToStore(true);
-
   }
 
   return (
-    <div className={styles.blockListExercises}>
+    <div className={(props.visibleListExercise) ? styles.blockListExercisesVisible : styles.blockListExercisesHide}>
       <div className={styles.wrapperButton}>
         <button
           className={styles.button}
@@ -30,7 +29,10 @@ const BlockListExercise = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({ windowVisible: state.windowNewExercise.visible });
+const mapStateToProps = (state) => ({ 
+  windowVisible: state.windowNewExercise.visible,
+  visibleListExercise: state.visibleListExercises.visibleListExercises
+});
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   changeVisibleWindowNewExerciseToStore,
