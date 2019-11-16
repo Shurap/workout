@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './DayOfExercises.module.css'
 import DateLine from './DateLine';
-import ListTrainingExercises from './ListTrainingExercises'
+import ListTrainingExercises from './ListTrainingExercises';
 
-const DayOfExercises = () => {
+const DayOfExercises = (props) => {
+
   return (
     <div className={styles.dayOfExercises}>
-      <DateLine />
-      <ListTrainingExercises/>
+      <DateLine
+        date={props.date}
+      />
+      <ListTrainingExercises />
     </div>
   )
 

@@ -15,9 +15,6 @@ function* doAddNewExerciseSaga({ data, history }) {
         data: (data.notes) ? data.notes : ''
       }
     }
-
-    console.log(sendData)
-
     const ref = yield firebase.db.ref(`user/${firebase.auth.currentUser.uid}/exercises`);
     yield ref.update(sendData);
     // yield firebase.updateDataToBase('exercises', sendData);

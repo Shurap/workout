@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './DateLine.module.css'
 
-const DateLine = () => {
+const DateLine = (props) => {
 return(
   <div className={styles.dateLine}>
-    Date
+    {props.date}
   </div>
 ) 
   

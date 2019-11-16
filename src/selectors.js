@@ -35,3 +35,20 @@ export const getExercisesFromStore = createSelector(
     }
   }
 );
+
+export const getDatesFromStore = createSelector(
+  (state) => state.currentUser.schedule,
+  (enterData) => {
+    return (enterData) ? Object.keys(enterData) : [];
+  }
+);
+
+
+
+export const getSetsFromStore = createSelector(
+  (state) => state.currentUser.schedule,
+  (exercises) => {
+    return exercises;
+  }
+);
+

@@ -4,6 +4,7 @@ import { registerSaga } from './sagas/registerSaga';
 import { signOutSaga } from './sagas/signOutSaga';
 import { addNewExerciseSaga } from './sagas/addNewExerciseSaga';
 import { deleteExerciseSaga } from './sagas/deleteExerciseSaga';
+import { sentExerciseToBaseSaga } from './sagas/sentExerciseToBaseSaga';
 
 export function* mainSaga() {
   yield all([
@@ -12,5 +13,6 @@ export function* mainSaga() {
     fork(signOutSaga),
     fork(addNewExerciseSaga),
     fork(deleteExerciseSaga),
+    fork(sentExerciseToBaseSaga)
   ])
 }

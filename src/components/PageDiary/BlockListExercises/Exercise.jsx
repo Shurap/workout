@@ -9,6 +9,7 @@ import imgCancel from '../../../images/cancel.png';
 import imgCheck from '../../../images/check.png';
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { doDeleteExercise } from '../../../redux/actions/actionCurrentUser';
+import { doSentExercise } from '../../../redux/actions/actionDataBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -35,6 +36,13 @@ const Exercise = (props) => {
     props.doDeleteExercise(props.label);
     setVisibleConfirm(false)
     event.stopPropagation();
+  }
+
+  const onAdd = (event) => {
+    event.stopPropagation();
+    props.doSentExercise(props.label);
+    setVisible(false);
+
   }
 
   const PanelConfirm = () => {
@@ -80,7 +88,7 @@ const Exercise = (props) => {
           <img src={imgInfo} alt="" />
         </div>
 
-        <div className={styles.buttonDiv} onClick={onClickButton}>
+        <div className={styles.buttonDiv} onClick={onAdd}>
           {props.dictionary.panelButtonAdd}
           <img src={imgArrowForward} alt="" />
         </div>
@@ -109,7 +117,8 @@ const Exercise = (props) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  doDeleteExercise
+  doDeleteExercise,
+  doSentExercise
 }, dispatch);
 
 export default withTranslator(withImage(connect(null, mapDispatchToProps)(Exercise)));

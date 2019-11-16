@@ -13,9 +13,10 @@ const ButtonHidePanel = (props) => {
   }
 
   return (
-    <div className={styles.button} onClick={onClick}>
-      {/* {props.dictionary.buttonClear} */}
-      <img src={(props.visible) ? imgPrevious : imgNext} alt="" />
+    <div className={styles.block}>
+      <div className={styles.button} onClick={onClick}>
+        <img src={(props.visible) ? imgPrevious : imgNext} alt="" />
+      </div>
     </div>
   )
 }

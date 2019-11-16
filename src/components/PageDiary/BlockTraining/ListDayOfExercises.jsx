@@ -1,16 +1,36 @@
 import React from 'react';
 import styles from './ListDayOfExercises.module.css'
 import DayOfExercises from './DayOfExercises';
+import { connect } from 'react-redux';
+import { getDatesFromStore } from '../../../selectors';
 
-const ListDayOfExercises = () => {
+const ListDayOfExercises = (props) => {
+
+  const arrayDates = props.currentListSets.map((element, index) => {
+    return (
+      <DayOfExercises
+        key={index}
+        date={element}
+      />
+    )
+  });
+
+  // <ListEdit
+  //           dateOfDay={dateOfDay}
+  //           exercise={exercise}
+  //           onSetStatusButtonSave={this.onSetStatusButtonSave}
+  //         />
+
   return (
     <div className={styles.listDayOfExercises}>
-      <DayOfExercises />
-      <DayOfExercises />
-      <DayOfExercises />
+      {arrayDates}
     </div>
   )
 
 }
 
-export default ListDayOfExercises;
+const mapStateToProps = (state) => ({
+  currentListSets: getDatesFromStore(state),
+});
+
+export default connect(mapStateToProps)(ListDayOfExercises);
