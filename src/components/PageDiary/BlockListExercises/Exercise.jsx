@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Exercise.module.css'
+import styles from './Exercise.module.scss'
 import withImage from '../../../hocs/withImage/withImage';
 import { useState } from 'react';
 import imgArrowForward from '../../../images/arrowForward.png';

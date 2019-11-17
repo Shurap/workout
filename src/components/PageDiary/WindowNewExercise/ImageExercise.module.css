@@ -1,7 +1,6 @@
 .imageExercise {
   /* border: 1px solid blue; */
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   height: 150px;
   width: 150px;

@@ -5,7 +5,7 @@ import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { changeVisibleWindowNewExerciseToStore } from '../../../redux/actions/actionWindowNewExercise';
-import styles from './BlockListExercises.module.css';
+import styles from './BlockListExercises.module.scss';
 
 const BlockListExercise = (props) => {
 

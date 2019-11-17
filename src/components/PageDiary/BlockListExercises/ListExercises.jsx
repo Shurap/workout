@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ListExercises.module.css';
+import styles from './ListExercises.module.scss';
 import { connect } from 'react-redux';
 import Exercise from './Exercise';
 import { getExercisesFromStore } from '../../../selectors';

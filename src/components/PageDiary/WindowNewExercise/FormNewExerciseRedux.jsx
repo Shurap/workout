@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FormNewExerciseRedux.module.css';
+import styles from './FormNewExerciseRedux.module.scss';
 import { Field, reduxForm } from 'redux-form'
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import RenderTextField from '../../common/forms/RenderTextField';

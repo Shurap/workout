@@ -43,8 +43,6 @@ export const getDatesFromStore = createSelector(
   }
 );
 
-
-
 export const getSetsFromStore = createSelector(
   (state) => state.currentUser.schedule,
   (exercises) => {

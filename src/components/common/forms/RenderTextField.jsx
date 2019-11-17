@@ -3,8 +3,6 @@ import styles from './RenderTextField.module.css';
 
 const RenderTextField = ({ input, meta, ...props }) => {
 
-// console.log(input)
-
   return (
     <div className={styles.renderTextField}>
       <input {...input} {...props} />

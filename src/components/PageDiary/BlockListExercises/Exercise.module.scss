@@ -1,0 +1,61 @@
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/variables.scss';
+
+.exercise {
+  // @include test-border(red);
+  @include border-box($border-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  color: $text-color;
+  cursor: pointer;
+}
+
+.image {
+  // width: 70px; 
+  height: 70px;
+}
+
+.wrapperText {
+  max-width: 170px;
+  padding-left: 15px;
+  padding-right: 5px;
+  overflow: hidden;
+}
+
+.panelButtonVisible {
+  // @include test-border(red);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  background-color: $general-background-color;
+  @include border-box($general-background-color);
+}
+
+.panelButtonHide {
+  display: none;
+}
+
+.panelConfirmVisible {
+  // @include test-border(red);
+  @extend .panelButtonVisible;
+}
+
+.panelConfirmHide {
+  display: none;
+}
+
+.wrapperButtons {
+  display: flex;
+}
+
+.buttonDiv {
+  @include button(40px, 50px);
+  font-size: 10px;
+}

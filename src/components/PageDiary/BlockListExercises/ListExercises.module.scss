@@ -1,0 +1,9 @@
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/variables.scss';
+
+.listExercises {
+  // @include test-border(magenta);
+  background-color: $general-background-color;
+  flex-grow: 1;
+  overflow-y: auto;
+}

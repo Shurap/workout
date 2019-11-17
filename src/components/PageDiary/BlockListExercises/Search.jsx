@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Search.module.css';
+import styles from './Search.module.scss';
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';

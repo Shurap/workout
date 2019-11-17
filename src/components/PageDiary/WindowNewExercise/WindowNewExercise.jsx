@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './WindowNewExercise.module.css';
+import styles from './WindowNewExercise.module.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FormNewExerciseRedux from './FormNewExerciseRedux';

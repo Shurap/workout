@@ -1,0 +1,29 @@
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/variables.scss';
+
+.blockListExercisesVisible {
+  // @include test-border(blue);
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  overflow: hidden;
+  @include transition(0.5s);
+}
+
+.blockListExercisesHide {
+  @extend .blockListExercisesVisible;
+  width: 0px;
+  @include transition(0.5s);
+}
+
+.wrapperButton {
+  // @include test-border(greenyellow);
+  display: block;
+  background-color: $general-background-color;
+  margin-bottom: 5px;
+  padding: 15px 10px 15px 10px;
+}
+
+.button {
+  @include button(40px, 240px);
+}
