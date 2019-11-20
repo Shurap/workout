@@ -1,11 +1,17 @@
 import React from 'react';
-import styles from './TrainingExercise.module.css'
+import styles from './TrainingExercise.module.scss'
 import ListSets from './ListSets';
 
-const TrainingExercise = () => {
+const TrainingExercise = (props) => {
   return (
     <div className={styles.trainingExercise}>
-      <ListSets />
+      <div className={styles.wrapperExercise}>
+        {props.exercise}
+      </div>
+      <ListSets
+        exercise={props.exercise}
+        date={props.date}
+      />
     </div>
   )
 

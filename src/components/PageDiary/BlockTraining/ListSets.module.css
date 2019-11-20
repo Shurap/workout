@@ -1,4 +1,27 @@
 .listSets {
-  border: 5px solid white;
+  /* border: 5px solid white; */
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
   display: flex;
+  /* overflow-x: auto; */
+}
+
+.wrapperText {
+  /* border: 5px solid green; */
+  width: 100px;
+  height: 70px;
+}
+
+.wrapperSets {
+  /* border: 2px solid red; */
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+
+.scroll {
+  /* border: 2px solid blue; */
+  display: flex;
+  /* flex-wrap: wrap; */
 }

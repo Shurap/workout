@@ -1,16 +1,31 @@
 import React from 'react';
 import styles from './ListTrainingExercises.module.css'
 import TrainingExercise from './TrainingExercise';
+import { connect } from 'react-redux';
+import { getAllExercisesFromStore } from '../../../selectors';
 
-const ListTrainingExrcises = () => {
+const ListTrainingExrcises = (props) => {
+
+  const arrayOfExercises = props.currentListExercises.map((element, index) => {
+    return (
+      <TrainingExercise
+        key={index}
+        exercise={element}
+        date={props.date}
+      />
+    )
+  });
+
   return (
     <div className={styles.listTrainingExrcises}>
-      <TrainingExercise />
-      <TrainingExercise />
-      <TrainingExercise />
+      {arrayOfExercises}
     </div>
   )
 
 }
 
-export default ListTrainingExrcises;
+const mapStateToProps = (state, ownProps) => ({
+  currentListExercises: getAllExercisesFromStore(state, ownProps.date),
+});
+
+export default connect(mapStateToProps)(ListTrainingExrcises);

@@ -1,0 +1,39 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.setSmall {
+  // @include test-border(red);
+  
+  @include border-box($border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2px;
+  height: 70px;
+  width: 50px;
+  transition: all 1s;
+}
+
+.setBig {
+  @extend .setSmall;
+  transition: all 1s;
+  
+  // border: 1px solid $button-color;
+  height: 140px;
+  width: 100px;
+  background-color: $button-color;
+}
+
+.wrapperSet {
+  // @include test-border(green);
+  display: flex;
+  justify-content: center;
+}
+
+.wrapperWight {
+  @extend .wrapperSet;
+}
+
+.wrapperCount {
+  @extend .wrapperSet;
+}

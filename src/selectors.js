@@ -24,12 +24,21 @@ export const getExercisesFromStore = createSelector(
       return element[0].toLowerCase().indexOf(searchLabel.toLowerCase()) > -1
     });
 
+
+
+
     if (selectLabel === 'All group') {
       const exitExercisesWithSearchSelect = exitExercisesWithSearch;
       return exitExercisesWithSearchSelect;
     } else {
       const exitExercisesWithSearchSelect = exitExercisesWithSearch.filter((element) => {
-        return element[1].toLowerCase().indexOf(selectLabel.toLowerCase()) > -1
+        // old notice
+        if (!!element[1]) {
+          return element[1].toLowerCase().indexOf(selectLabel.toLowerCase()) > -1
+        } else {
+          return element[1]
+        }
+        //----------------------------------
       });
       return exitExercisesWithSearchSelect;
     }
@@ -43,10 +52,22 @@ export const getDatesFromStore = createSelector(
   }
 );
 
+export const getAllExercisesFromStore = createSelector(
+  (state, date) => state.currentUser.schedule,
+  (state, date) => date,
+  (enterData, date) => {
+    const exitData = Object.keys(enterData[date]);
+    return (exitData)
+  }
+);
+
 export const getSetsFromStore = createSelector(
-  (state) => state.currentUser.schedule,
-  (exercises) => {
-    return exercises;
+  (state, exercise, date) => state.currentUser.schedule,
+  (state, exercise, date) => exercise,
+  (state, exercise, date) => date,
+  (schedule, exercise, date) => {
+    const exitData = schedule[date][exercise];
+    return exitData;
   }
 );
 

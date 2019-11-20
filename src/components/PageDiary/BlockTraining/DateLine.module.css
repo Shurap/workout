@@ -1,4 +1,9 @@
 .dateLine {
-  border: 5px solid brown;
-  background-color: gray;
+  /* border: 5px solid brown; */
+  background-color: rgb(58, 57, 57);
+  /* background-color: black; */
+  color: black;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
 }

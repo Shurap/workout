@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import styles from './Set.module.css'
+import styles from './Set.module.scss'
 
-const Set = () => {
+const Set = (props) => {
 
   const [size, setSize] = useState(false);
 
@@ -11,7 +11,12 @@ const Set = () => {
 
   return (
     <div className={(size) ? styles.setBig : styles.setSmall} onClick={onClick}>
-      Set
+    <div className={styles.wrapperSet}>set {props.number+1}</div>
+    <div className={styles.wrapperWight}>{props.wight}</div>
+    <div className={styles.wrapperCount}>{props.count}</div>
+      
+      
+      
     </div>
   )
 

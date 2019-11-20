@@ -10,7 +10,9 @@ const DayOfExercises = (props) => {
       <DateLine
         date={props.date}
       />
-      <ListTrainingExercises />
+      <ListTrainingExercises 
+        date={props.date}
+      />
     </div>
   )
 

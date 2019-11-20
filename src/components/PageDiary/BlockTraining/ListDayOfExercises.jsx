@@ -15,12 +15,6 @@ const ListDayOfExercises = (props) => {
     )
   });
 
-  // <ListEdit
-  //           dateOfDay={dateOfDay}
-  //           exercise={exercise}
-  //           onSetStatusButtonSave={this.onSetStatusButtonSave}
-  //         />
-
   return (
     <div className={styles.listDayOfExercises}>
       {arrayDates}
