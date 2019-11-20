@@ -11,13 +11,11 @@
 .wrapperExercise {
   display: flex;
   justify-content: flex-start;
-  // width: 200px;
-
-  // border: 5px solid green;
-  // width: 100%;
-  border-radius: 20px 20px 0 0;
+  align-items: center;
+  // border-radius: 20px 20px 0 0;
+  background-color: rgba(0, 0, 0, 0.85);
   height: 30px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), #4b18d9);
+  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), #4b18d9);
   padding-left: 20px;
   white-space: nowrap;
   overflow: hidden;

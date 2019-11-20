@@ -1,7 +1,10 @@
+@import '../../../globalCSS/fonts.scss';
+@import '../../../globalCSS/mixins.scss';
+
 .listSets {
-  /* border: 5px solid white; */
+  // @include test-border(yellow);
   background-color: rgba(0, 0, 0, 0.85);
-  width: 100%;
+  // width: 100%;
   display: flex;
   /* overflow-x: auto; */
 }
@@ -24,4 +27,9 @@
   /* border: 2px solid blue; */
   display: flex;
   /* flex-wrap: wrap; */
+}
+
+p {
+  font: 12px Anodina;
+  color: white;
 }

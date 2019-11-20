@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ListSets.module.css';
+import styles from './ListSets.module.scss';
 import Set from './Set';
 import { getSetsFromStore } from '../../../selectors';
 import { connect } from 'react-redux';
@@ -20,7 +20,9 @@ const ListSets = (props) => {
   return (
     <div className={styles.listSets}>
       <div className={styles.wrapperText}>
-
+        <p> </p>
+        <p>weight</p>
+        <p>repeat</p>
       </div>
       <div className={styles.wrapperSets}>
         <div className={styles.scroll}>

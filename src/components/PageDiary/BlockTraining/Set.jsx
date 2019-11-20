@@ -11,12 +11,9 @@ const Set = (props) => {
 
   return (
     <div className={(size) ? styles.setBig : styles.setSmall} onClick={onClick}>
-    <div className={styles.wrapperSet}>set {props.number+1}</div>
-    <div className={styles.wrapperWight}>{props.wight}</div>
-    <div className={styles.wrapperCount}>{props.count}</div>
-      
-      
-      
+      <div className={styles.wrapperSet}>set {props.number + 1}</div>
+      <div className={styles.wrapperWight}>{props.wight}</div>
+      <div className={styles.wrapperCount}>{props.count}</div>
     </div>
   )
 
