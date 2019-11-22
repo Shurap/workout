@@ -11,7 +11,7 @@ const ListSets = (props) => {
       <Set
         key={element.id}
         count={element.count}
-        wight={element.wight}
+        weight={element.wight}
         number={index}
       />
     )

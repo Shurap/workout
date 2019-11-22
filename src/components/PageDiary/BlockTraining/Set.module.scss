@@ -23,7 +23,7 @@
   transition: all 0.5s;
   height: 140px;
   width: 160px;
-  background-color: $button-color;
+  background-color: rgba(75, 24, 217, 0.5);
 }
 
 .edit {
@@ -58,6 +58,10 @@
   width: 24px;
 }
 
+.buttonRightForward {
+  @extend .buttonRight;
+}
+
 .wrapperEditButtons {
   // @include test-border(green);
   display: flex;
@@ -70,4 +74,8 @@
   transform: rotate(180deg);
   height: 24px;
   width: 24px;
+}
+
+.buttonLeftForward {
+  @extend .buttonLeft;
 }
