@@ -13,6 +13,9 @@ const ListSets = (props) => {
         count={element.count}
         weight={element.wight}
         number={index}
+        date={props.date}
+        exercise={props.exercise}
+        
       />
     )
   });

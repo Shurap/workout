@@ -1,0 +1,48 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.wrapperText {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font: 10px Anodina;
+  color: white;
+}
+
+.wrapperEditButtons {
+  // @include test-border(green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit {
+  @include border-box($border-color);
+  background-color: transparent;
+  width: 50px;
+  text-align: center;
+  font: 18px Anodina-bold;
+  color: white;
+}
+
+.buttonRight {
+  // @include test-border(red);
+  height: 24px;
+  width: 24px;
+}
+
+// .buttonRightForward {
+//   @extend .buttonRight;
+// }
+
+.buttonLeft {
+  // @include test-border(red);
+  transform: rotate(180deg);
+  height: 24px;
+  width: 24px;
+}
+
+// .buttonLeftForward {
+//   @extend .buttonLeft;
+// }
