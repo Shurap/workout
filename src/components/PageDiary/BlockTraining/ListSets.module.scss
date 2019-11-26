@@ -4,32 +4,54 @@
 .listSets {
   // @include test-border(yellow);
   background-color: rgba(0, 0, 0, 0.85);
-  // width: 100%;
   display: flex;
-  /* overflow-x: auto; */
 }
 
 .wrapperText {
-  /* border: 5px solid green; */
-  width: 100px;
+  // @include test-border(green);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 5px;
+  font: 12px Anodina;
+  color: white;
+  width: 50px;
   height: 70px;
 }
 
 .wrapperSets {
   /* border: 2px solid red; */
-  /* position: absolute; */
   display: flex;
+  align-items: center;
   width: 100%;
   overflow: auto;
 }
 
 .scroll {
-  /* border: 2px solid blue; */
+  // @include test-border(blue);
   display: flex;
-  /* flex-wrap: wrap; */
 }
 
-p {
-  font: 12px Anodina;
+.wrapperWeight {
+  padding-bottom: 10px;
+}
+
+.wrapperRepeat {
+  padding-bottom: 4px;
+}
+
+.button {
+  // @include button(40px, 50px);
+  height: 40px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5px;
   color: white;
+  background: radial-gradient(at center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), #4b18d9, #4b18d9);
+  border: none;
+  border-radius: 20px;
+
 }

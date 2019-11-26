@@ -6,6 +6,7 @@ import {
   DO_DELETE_EXERCISE,
   ADD_TRAINING_EXERCISE_TO_STORE,
   ADD_LABEL_EXERCISE_TO_STORE,
+  ADD_NEW_CLEAR_EXERCISE_TO_STORE
 } from '../constants';
 
 export function addAuthUserDataToStore(data) {
@@ -58,5 +59,14 @@ export function addLabelExerciseToStore(target, date, exercise, id, label) {
     exercise,
     id,
     label
+  }
+}
+
+export function addNewClearExerciseToStore(date, exercise, array) {
+  return {
+    type: ADD_NEW_CLEAR_EXERCISE_TO_STORE,
+    date,
+    exercise,
+    array
   }
 }

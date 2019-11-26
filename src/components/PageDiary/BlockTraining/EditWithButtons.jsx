@@ -12,10 +12,10 @@ const EditWithButtons = (props) => {
 
   useEffect(() => {
     return () => {
-      // console.log(label)
       props.addLabelExerciseToStore(props.target, props.date, props.exercise, props.number, label)
+      // console.log(label)
     }
-  })
+  }, [label])
 
   const onClickInput = (event) => {
     event.stopPropagation();
@@ -28,6 +28,7 @@ const EditWithButtons = (props) => {
   const onClickButtonLeftLabel = (event) => {
     event.stopPropagation();
     setLabel(+label - 1);
+    console.log(label)
   }
 
   const onClickButtonLeftForwardLabel = (event) => {

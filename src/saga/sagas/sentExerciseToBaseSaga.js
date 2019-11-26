@@ -12,13 +12,9 @@ function* doSentExerciseToBaseSaga({ data }) {
     const sendData = { [data]: [{wight: '0', count: '0', id: 0}] };
     const ref = yield firebase.db.ref(`user/${firebase.auth.currentUser.uid}/schedule/${today}/`);
     yield ref.update(sendData);
-
     yield put(addTrainingExerciseToStore(sendData,today))
-
     yield put(loadingEndToStore());
-
   } catch (error) {
-
     yield put(loadingEndToStore());
     yield put(addErrorToStore(error));
   }

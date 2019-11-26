@@ -5,6 +5,7 @@ import {
   DELETE_EXERCISE_FROM_STORE,
   ADD_TRAINING_EXERCISE_TO_STORE,
   ADD_LABEL_EXERCISE_TO_STORE,
+  ADD_NEW_CLEAR_EXERCISE_TO_STORE,
 } from '../constants';
 import { merge } from 'ramda';
 
@@ -72,6 +73,16 @@ function currentUser(state = initialState, action) {
     //     }
     //   }
     // }
+
+    case ADD_NEW_CLEAR_EXERCISE_TO_STORE:
+      console.log('reducer', action.array);
+      return {
+        ...state, schedule: {
+          ...state.schedule, [action.date]: {
+            ...state.schedule[action.date], [action.exercise]: action.array
+          }
+        }
+      }
 
     default:
       return state;
