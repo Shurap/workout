@@ -4,6 +4,10 @@ import imgDelete from '../../../images/delete.png';
 import forward from '../../../images/forward.png';
 import EditWithButtons from './EditWithButtons';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+import { getSetsFromStore } from '../../../selectors';
+import { bindActionCreators } from 'redux';
+import { doDeleteSet } from '../../../redux/actions/actionDataBase';
 
 const Set = (props) => {
 
@@ -20,13 +24,12 @@ const Set = (props) => {
 
   const onClickButtonDelete = (event) => {
     event.stopPropagation();
-    console.log('delete');
+    props.doDeleteSet(props.date, props.exercise, props.number, props.currentListSets);
     setSize(false)
   }
 
   return (
     <div>
-
 
       <div className={(size) ? styles.setBig : styles.setSmall} onClick={onClickPanel}>
 
@@ -63,12 +66,17 @@ const Set = (props) => {
             <div className={styles.wrapperWeight}>{props.count}</div>
         }
       </div>
-
-
       <div className={(size) ? styles.visibleBack : styles.hideBack} onClick={onClickClose}></div>
     </div>
   )
-
 }
 
-export default Set;
+const mapStateToProps = (state, ownProps) => ({
+  currentListSets: getSetsFromStore(state, ownProps.exercise, ownProps.date),
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  doDeleteSet
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Set);
