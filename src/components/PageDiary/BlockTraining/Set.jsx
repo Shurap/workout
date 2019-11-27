@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Set.module.scss';
-import close from '../../../images/close.png';
+import imgDelete from '../../../images/delete.png';
 import forward from '../../../images/forward.png';
 import EditWithButtons from './EditWithButtons';
 import ReactDOM from 'react-dom';
@@ -13,8 +13,14 @@ const Set = (props) => {
     setSize(true)
   }
 
-  const onClickButtonClose = (event) => {
+  const onClickClose = (event) => {
     event.stopPropagation();
+    setSize(false)
+  }
+
+  const onClickButtonDelete = (event) => {
+    event.stopPropagation();
+    console.log('delete');
     setSize(false)
   }
 
@@ -27,13 +33,9 @@ const Set = (props) => {
         <div className={styles.wrapperSetImage}>
           <div className={styles.wrapperSet}>set {props.number + 1}</div>
 
-          {/* <div className={styles.imgClose} onClick={onClickButtonClose}>
-            {(size) ?
-              <img
-                src={close}
-              /> :
-              null}
-          </div> */}
+          <div className={styles.imgClose} onClick={onClickButtonDelete}>
+            {(size) ? <img src={imgDelete} /> : null}
+          </div>
         </div>
 
 
@@ -63,7 +65,7 @@ const Set = (props) => {
       </div>
 
 
-      <div className={(size) ? styles.visibleBack : styles.hideBack} onClick={onClickButtonClose}></div>
+      <div className={(size) ? styles.visibleBack : styles.hideBack} onClick={onClickClose}></div>
     </div>
   )
 

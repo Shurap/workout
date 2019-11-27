@@ -9,12 +9,7 @@ import {
 } from '../constants';
 import { merge } from 'ramda';
 
-const initialState = {
-  // email: '',
-  // exercises: {},
-  // schedule: {},
-  // username: ''
-};
+const initialState = {};
 
 function currentUser(state = initialState, action) {
   switch (action.type) {
@@ -45,15 +40,12 @@ function currentUser(state = initialState, action) {
 
     case ADD_LABEL_EXERCISE_TO_STORE:
       const data = { ...state.schedule[action.date][action.exercise][action.id] }
-      // console.log('data: ', data)
       const newData = { ...data, [action.target]: action.label }
-      // console.log('newData: ', newData);
       const array = [
         ...state.schedule[action.date][action.exercise].slice(0, action.id),
         newData,
         ...state.schedule[action.date][action.exercise].slice(action.id + 1)
       ]
-      // console.log('array: ', array);
       return {
         ...state, schedule: {
           ...state.schedule, [action.date]: {
@@ -62,24 +54,12 @@ function currentUser(state = initialState, action) {
         }
       }
 
-    // return {
-    //   ...state, schedule: {
-    //     ...state.schedule, [action.date]: {
-    //       ...state.schedule[action.date], [action.exercise]: {
-    //         ...state.schedule[action.date][action.exercise], [action.id]: {
-    //           ...state.schedule[action.date][action.exercise][action.id], wight: newData
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-
     case ADD_NEW_CLEAR_EXERCISE_TO_STORE:
-      console.log('reducer', action.array);
+      const newArray = action.array.slice();
       return {
         ...state, schedule: {
           ...state.schedule, [action.date]: {
-            ...state.schedule[action.date], [action.exercise]: action.array
+            ...state.schedule[action.date], [action.exercise]: newArray
           }
         }
       }

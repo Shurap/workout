@@ -68,14 +68,7 @@ export const getSetsFromStore = createSelector(
   (schedule, exercise, date) => {
     
     const exitData = schedule[date][exercise];
-    console.log('selector', exitData)
     return exitData;
   }
 );
-
-// export const getSetsFromStore = (state, exercise, date) => {
-//   console.log('selector')
-//   const exitData = state.currentUser.schedule[date][exercise];
-//   return exitData;
-// }
 

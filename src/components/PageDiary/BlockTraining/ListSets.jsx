@@ -10,11 +10,8 @@ import { doAddNewClearExercise } from '../../../redux/actions/actionDataBase';
 const ListSets = (props) => {
 
   const onClickButton = () => {
-    // console.log('onclick', props.currentListSets)
     props.doAddNewClearExercise(props.date, props.exercise, props.currentListSets);
   }
-
-  console.log('component', props.currentListSets);
 
   const arraySets = props.currentListSets.map((element, index) => {
     return (
@@ -25,7 +22,6 @@ const ListSets = (props) => {
         number={index}
         date={props.date}
         exercise={props.exercise}
-
       />
     )
   });
