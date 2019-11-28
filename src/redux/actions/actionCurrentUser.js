@@ -6,7 +6,8 @@ import {
   DO_DELETE_EXERCISE,
   ADD_TRAINING_EXERCISE_TO_STORE,
   ADD_LABEL_EXERCISE_TO_STORE,
-  ADD_NEW_CLEAR_EXERCISE_TO_STORE
+  ADD_NEW_CLEAR_EXERCISE_TO_STORE,
+  DELETE_SET_FROM_STORE,
 } from '../constants';
 
 export function addAuthUserDataToStore(data) {
@@ -68,5 +69,14 @@ export function addNewClearExerciseToStore(date, exercise, array) {
     date,
     exercise,
     array
+  }
+}
+
+export function deleteSetFromStore(date, exercise, newArray) {
+  return {
+    type: DELETE_SET_FROM_STORE,
+    date,
+    exercise,
+    newArray
   }
 }

@@ -24,6 +24,7 @@ const Set = (props) => {
 
   const onClickButtonDelete = (event) => {
     event.stopPropagation();
+    console.log('component', props.currentListSets)
     props.doDeleteSet(props.date, props.exercise, props.number, props.currentListSets);
     setSize(false)
   }

@@ -6,6 +6,7 @@ import {
   ADD_TRAINING_EXERCISE_TO_STORE,
   ADD_LABEL_EXERCISE_TO_STORE,
   ADD_NEW_CLEAR_EXERCISE_TO_STORE,
+  DELETE_SET_FROM_STORE,
 } from '../constants';
 import { merge } from 'ramda';
 
@@ -60,6 +61,15 @@ function currentUser(state = initialState, action) {
         ...state, schedule: {
           ...state.schedule, [action.date]: {
             ...state.schedule[action.date], [action.exercise]: newArray
+          }
+        }
+      }
+
+    case DELETE_SET_FROM_STORE:
+      return {
+        ...state, schedule: {
+          ...state.schedule, [action.date]: {
+            ...state.schedule[action.date], [action.exercise]: action.newArray
           }
         }
       }
