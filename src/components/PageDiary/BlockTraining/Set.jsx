@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Set.module.scss';
 import imgDelete from '../../../images/delete.png';
-import forward from '../../../images/forward.png';
 import EditWithButtons from './EditWithButtons';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { getSetsFromStore } from '../../../selectors';
 import { bindActionCreators } from 'redux';
@@ -24,7 +22,6 @@ const Set = (props) => {
 
   const onClickButtonDelete = (event) => {
     event.stopPropagation();
-    console.log('component', props.currentListSets)
     props.doDeleteSet(props.date, props.exercise, props.number, props.currentListSets);
     setSize(false)
   }
@@ -38,7 +35,7 @@ const Set = (props) => {
           <div className={styles.wrapperSet}>set {props.number + 1}</div>
 
           <div className={styles.imgClose} onClick={onClickButtonDelete}>
-            {(size) ? <img src={imgDelete} /> : null}
+            {(size) ? <img src={imgDelete} alt=""/> : null}
           </div>
         </div>
 

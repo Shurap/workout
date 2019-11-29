@@ -37,9 +37,11 @@ const ListSets = (props) => {
           {arraySets}
         </div>
 
-        <div className={styles.button} onClick={onClickButton}>
-          {/* {props.dictionary.panelButtonCancel} */}
-          <img src={imgAdd} alt="" />
+        <div className={styles.wrapperButton}>
+          <div className={styles.button} onClick={onClickButton}>
+            {/* {props.dictionary.panelButtonCancel} */}
+            <img src={imgAdd} alt="" />
+          </div>
         </div>
 
       </div>

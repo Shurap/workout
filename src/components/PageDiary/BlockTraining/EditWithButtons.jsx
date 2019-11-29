@@ -56,11 +56,13 @@ const EditWithButtons = (props) => {
           className={styles.buttonLeft}
           src={forward}
           onClick={onClickButtonLeftForwardLabel}
+          alt=""
         />
         <img
           className={styles.buttonLeft}
           src={arrow}
           onClick={onClickButtonLeftLabel}
+          alt=""
         />
         <input
           className={styles.edit}
@@ -72,11 +74,13 @@ const EditWithButtons = (props) => {
           className={styles.buttonRight}
           src={arrow}
           onClick={onClickButtonRightLabel}
+          alt=""
         />
         <img
           className={styles.buttonRight}
           src={forward}
           onClick={onClickButtonRightForwardLabel}
+          alt=""
         />
       </div>
     </div>

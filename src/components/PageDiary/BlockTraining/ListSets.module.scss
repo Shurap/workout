@@ -1,3 +1,4 @@
+@import '../../../globalCSS/variables.scss';
 @import '../../../globalCSS/fonts.scss';
 @import '../../../globalCSS/mixins.scss';
 
@@ -22,7 +23,7 @@
 .wrapperSets {
   /* border: 2px solid red; */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   overflow: auto;
 }
@@ -34,24 +35,28 @@
 
 .wrapperWeight {
   padding-bottom: 10px;
+  color: $text-color-fog;
 }
 
 .wrapperRepeat {
   padding-bottom: 4px;
+  color: $text-color-fog;
 }
 
 .button {
-  // @include button(40px, 50px);
-  height: 40px;
-  width: 50px;
+  @include button(30px, 40px);
+  margin: 5px;
+  background: radial-gradient(at center, rgba(0, 0, 0, 0.1), #4b18d9);  border: none;
+  border-radius: 20px;
+}
+
+.wrapperButton {
+  @include border-box($border-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  margin: 5px;
-  color: white;
-  background: radial-gradient(at center, rgba(0, 0, 0, 0.1), #4b18d9);
-  border: none;
-  border-radius: 20px;
-
+  align-items: center;
+  margin: 2px;
+  height: 70px;
+  width: 50px;
 }

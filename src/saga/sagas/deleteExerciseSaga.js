@@ -10,17 +10,13 @@ function* doDeleteExerciseSaga({ data }) {
     yield put(loadingBeginToStore());
     yield firebase.deleteExerciseFromBase(data);
     yield put(deleteExerciseFromStore(data));
-
-
     yield put(loadingEndToStore());
-  } catch(error) {
+  } catch (error) {
     yield put(loadingEndToStore());
     yield put(addErrorToStore(error));
   }
 }
 
-
-
-  export function* deleteExerciseSaga() {
-    yield takeEvery(DO_DELETE_EXERCISE, doDeleteExerciseSaga);
-  }
+export function* deleteExerciseSaga() {
+  yield takeEvery(DO_DELETE_EXERCISE, doDeleteExerciseSaga);
+}
