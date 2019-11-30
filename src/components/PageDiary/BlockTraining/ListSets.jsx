@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ListSets.module.scss';
 import Set from './Set';
-import { getSetsFromStore } from '../../../selectors';
+import { getSetsFromStore } from '../../../selectors/getSetsFromStore';
 import { connect } from 'react-redux';
 import imgAdd from '../../../images/add.png';
 import { bindActionCreators } from 'redux';

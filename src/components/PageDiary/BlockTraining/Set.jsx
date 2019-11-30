@@ -3,7 +3,7 @@ import styles from './Set.module.scss';
 import imgDelete from '../../../images/delete.png';
 import EditWithButtons from './EditWithButtons';
 import { connect } from 'react-redux';
-import { getSetsFromStore } from '../../../selectors';
+import { getSetsFromStore } from '../../../selectors/getSetsFromStore';
 import { bindActionCreators } from 'redux';
 import { doDeleteSet, doAddValueSet } from '../../../redux/actions/actionDataBase';
 

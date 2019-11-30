@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ListDayOfExercises.module.css'
 import DayOfExercises from './DayOfExercises';
 import { connect } from 'react-redux';
-import { getDatesFromStore } from '../../../selectors';
+import { getDatesFromStore } from '../../../selectors/getDatesFromStore';
 
 const ListDayOfExercises = (props) => {
 

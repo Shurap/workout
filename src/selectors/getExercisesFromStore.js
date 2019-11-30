@@ -44,31 +44,3 @@ export const getExercisesFromStore = createSelector(
     }
   }
 );
-
-export const getDatesFromStore = createSelector(
-  (state) => state.currentUser.schedule,
-  (enterData) => {
-    return (enterData) ? Object.keys(enterData) : [];
-  }
-);
-
-export const getAllExercisesFromStore = createSelector(
-  (state, date) => state.currentUser.schedule,
-  (state, date) => date,
-  (enterData, date) => {
-    const exitData = Object.keys(enterData[date]);
-    return (exitData)
-  }
-);
-
-export const getSetsFromStore = createSelector(
-  (state, exercise, date) => state.currentUser.schedule,
-  (state, exercise, date) => exercise,
-  (state, exercise, date) => date,
-  (schedule, exercise, date) => {
-    
-    const exitData = schedule[date][exercise];
-    return exitData;
-  }
-);
-

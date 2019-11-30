@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ListTrainingExercises.module.css'
 import TrainingExercise from './TrainingExercise';
 import { connect } from 'react-redux';
-import { getAllExercisesFromStore } from '../../../selectors';
+import { getAllExercisesFromStore } from '../../../selectors/getAllExercisesFromStore';
 
 const ListTrainingExrcises = (props) => {
 
