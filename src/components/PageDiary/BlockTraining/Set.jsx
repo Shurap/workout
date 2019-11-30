@@ -5,7 +5,7 @@ import EditWithButtons from './EditWithButtons';
 import { connect } from 'react-redux';
 import { getSetsFromStore } from '../../../selectors';
 import { bindActionCreators } from 'redux';
-import { doDeleteSet } from '../../../redux/actions/actionDataBase';
+import { doDeleteSet, doAddValueSet } from '../../../redux/actions/actionDataBase';
 
 const Set = (props) => {
 
@@ -17,6 +17,7 @@ const Set = (props) => {
 
   const onClickClose = (event) => {
     event.stopPropagation();
+    props.doAddValueSet(props.date, props.exercise, props.currentListSets)
     setSize(false)
   }
 
@@ -35,7 +36,7 @@ const Set = (props) => {
           <div className={styles.wrapperSet}>set {props.number + 1}</div>
 
           <div className={styles.imgClose} onClick={onClickButtonDelete}>
-            {(size) ? <img src={imgDelete} alt=""/> : null}
+            {(size) ? <img src={imgDelete} alt="" /> : null}
           </div>
         </div>
 
@@ -64,7 +65,11 @@ const Set = (props) => {
             <div className={styles.wrapperWeight}>{props.count}</div>
         }
       </div>
-      <div className={(size) ? styles.visibleBack : styles.hideBack} onClick={onClickClose}></div>
+      <div
+        className={(size) ? styles.visibleBack : styles.hideBack}
+        onClick={onClickClose}
+      >
+      </div>
     </div>
   )
 }
@@ -74,7 +79,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  doDeleteSet
+  doDeleteSet,
+  doAddValueSet
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Set);
