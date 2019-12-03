@@ -10,7 +10,6 @@ function* doAddNewClearExerciseSaga({ date, exercise, array }) {
     yield put(loadingBeginToStore());
     const id = array[array.length - 1].id;
     array.push({ count: '0', id: id + 1, wight: '0' });
-    
     const ref = yield firebase.db.ref(`user/${firebase.auth.currentUser.uid}/schedule/${date}/${exercise}`);
     yield ref.set(array);
     yield put(loadingEndToStore());
