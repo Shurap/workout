@@ -1,0 +1,71 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.windowInfoHide {
+  display: none;
+}
+
+.windowInfoVisible {
+  // @include test-border(green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+
+.window {
+  // @include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-between;
+  background-color: $general-background-color;
+  color: $text-color;
+  width: 300px;
+  height: 500px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 20px;
+}
+
+.image {
+  // @include test-border(blue);
+  display: flex;
+  justify-content: center;
+  height: 140px;
+  width: auto;
+  margin-bottom: 20px;
+  
+}
+
+.wrapperExercise {
+  @include border-box($border-color);  
+  display: flex;
+  
+  
+  align-items: center;
+  justify-content: center;
+  // margin: 2px;
+  height: 40px;
+  width: 250px;
+  margin-bottom: 20px;
+  padding: 5px;
+  // font: 18px Anodina-bold;
+  // color: white;
+}
+
+.wrapperNote {
+  @include border-box($border-color);  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 250px;
+  padding: 5px;
+}

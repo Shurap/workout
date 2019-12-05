@@ -2,21 +2,24 @@
 @import '../../../globalCSS/mixins.scss';
 
 .trainingExercise {
-  // border: 5px solid lightcoral;
-  color: white;
+  // @include test-border(red);
+  color: $text-color;
   margin: 2px;
-  // width: 100%;
 }
 
 .wrapperExercise {
+  // @include test-border(green);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // border-radius: 20px 20px 0 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: $general-background-color;
   height: 30px;
-  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), #4b18d9);
   padding-left: 20px;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.imgInfo {
+  margin-right: 10px;
+  cursor: pointer;
 }

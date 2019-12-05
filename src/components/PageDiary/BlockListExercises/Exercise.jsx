@@ -12,6 +12,7 @@ import { doDeleteExercise } from '../../../redux/actions/actionCurrentUser';
 import { doSentExercise } from '../../../redux/actions/actionDataBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { changeVisibleWindowInfoToStore } from '../../../redux/actions/actionWindowInfo';
 
 const Exercise = (props) => {
 
@@ -24,6 +25,13 @@ const Exercise = (props) => {
     setVisible(false);
     setVisibleConfirm(false);
     event.stopPropagation();
+  }
+
+  const onClickInfo = (event) => {
+    event.stopPropagation();
+    props.changeVisibleWindowInfoToStore(true, props.label)
+    setVisible(false);
+
   }
 
   const onDelete = (event) => {
@@ -83,7 +91,7 @@ const Exercise = (props) => {
           <img src={imgDelete} alt="" />
         </div>
 
-        <div className={styles.buttonDiv} onClick={onClickButton}>
+        <div className={styles.buttonDiv} onClick={onClickInfo}>
           {props.dictionary.panelButtonInfo}
           <img src={imgInfo} alt="" />
         </div>
@@ -106,9 +114,7 @@ const Exercise = (props) => {
       <PanelConfirm />
       <img
         className={styles.image}
-
         src={props.imageShow[props.image]}
-        
         alt=""
       ></img>
       <div className={styles.wrapperText}>
@@ -120,7 +126,8 @@ const Exercise = (props) => {
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   doDeleteExercise,
-  doSentExercise
+  doSentExercise,
+  changeVisibleWindowInfoToStore
 }, dispatch);
 
 export default withTranslator(withImage(connect(null, mapDispatchToProps)(Exercise)));

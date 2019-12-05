@@ -8,6 +8,7 @@ import { sentExerciseToBaseSaga } from './sagas/sentExerciseToBaseSaga';
 import { addNewClearExerciseSaga } from './sagas/addNewClearExerciseSaga';
 import { deleteSetSaga } from './sagas/deleteSetSaga';
 import { addValueSetSaga } from './sagas/addValueSetSaga';
+import { getDataToInfoSaga } from './sagas/getDataToInfoSaga';
 
 export function* mainSaga() {
   yield all([
@@ -20,5 +21,6 @@ export function* mainSaga() {
     fork(addNewClearExerciseSaga),
     fork(deleteSetSaga),
     fork(addValueSetSaga),
+    // fork(getDataToInfoSaga),
   ])
 }
