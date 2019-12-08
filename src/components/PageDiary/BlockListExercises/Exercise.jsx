@@ -112,11 +112,13 @@ const Exercise = (props) => {
     >
       <PanelButton />
       <PanelConfirm />
-      <img
-        className={styles.image}
-        src={props.imageShow[props.image]}
-        alt=""
-      ></img>
+      <div className={styles.wrapperImage}>
+        <img
+          className={styles.image}
+          src={props.imageShow[props.image]}
+          alt=""
+        ></img>
+      </div>
       <div className={styles.wrapperText}>
         {props.label}
       </div>

@@ -26,16 +26,24 @@ const WindowInfo = (props) => {
       onClick={onClose}
     >
       <div className={styles.window}>
-        <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
-        <div className={styles.wrapperExercise}>
-          {props.nameExercise}
+        <div className={styles.block}>
+          <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
         </div>
-        <div className={styles.wrapperNote}>
-          {props.noteExercise}
+
+        <div className={styles.block}>
+          <div className={styles.wrapperExercise}>
+            {props.nameExercise}
+          </div>
         </div>
+
+        <div className={styles.block}>
+          <div className={styles.wrapperNote}>
+            {props.noteExercise}
+          </div>
+        </div>
+
         <HistoryBox />
       </div>
-
     </div>
   )
 }

@@ -8,7 +8,7 @@ import { sentExerciseToBaseSaga } from './sagas/sentExerciseToBaseSaga';
 import { addNewClearExerciseSaga } from './sagas/addNewClearExerciseSaga';
 import { deleteSetSaga } from './sagas/deleteSetSaga';
 import { addValueSetSaga } from './sagas/addValueSetSaga';
-import { getDataToInfoSaga } from './sagas/getDataToInfoSaga';
+// import { getDataToInfoSaga } from './sagas/getDataToInfoSaga';
 
 export function* mainSaga() {
   yield all([

@@ -1,0 +1,16 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.history {
+  border: 1px solid $border-color;
+  margin: 5px;
+  // @include test-border(blue);
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 78px;
+}
+
+.historyBox {
+  // @include test-border(green);
+  display: flex;
+}
