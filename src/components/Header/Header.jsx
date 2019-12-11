@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import SwitcherLang from './SwitcherLang';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 import logo from '../../images/logo.png'

@@ -1,0 +1,21 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/fonts.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.listTrainingExrcises {
+  // @include test-border(yellow);
+  /* background-color: rgba(0, 0, 0, 0.85); */
+  color: white;
+  /* width: 100%; */
+}
+
+// .footer {
+//   // @include test-border(green);
+//   height: 10px;
+//   border-radius: 0 0 10px 10px;
+//   // background-color: $general-background-color;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   margin-left: 2px;
+//   margin-right: 2px;
+  
+// }

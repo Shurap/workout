@@ -16,7 +16,6 @@
 .wrapperImage {
   // @include test-border(blue);
   display: block;
-  // width: 75px;
   min-width: 75px;
 }
 
@@ -29,6 +28,7 @@
   // @include test-border(yellow);
   width: 150px;
   margin-bottom: 5px;
+  margin-right: 5px;
   overflow: hidden;
   height: 70px;
   font: 16px Anodina-bold;

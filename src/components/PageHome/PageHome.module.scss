@@ -1,3 +1,12 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.pageHome {
+  // font: 16px Anodina-regular;
+  // color: $text-color;
+}
+
 .backgroundPicture {
   /* border: 5px solid peru; */
   display: flex;
