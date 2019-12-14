@@ -13,8 +13,6 @@
   margin: 2px;
   height: 70px;
   width: 50px;
-  // font: 18px Anodina-bold;
-  // color: white;
   transition: all 0.3s;
 }
 
@@ -46,19 +44,15 @@
   // @include test-border(red);
   display: flex;
   justify-content: center;
-  // font: 16px Anodina;
-  // color: $text-color-fog;
   flex-grow: 1;
 }
 
 .wrapperWight {
   @extend .wrapperSet;
-  // font: 18px Anodina-bold;
 }
 
 .wrapperCount {
   @extend .wrapperSet;
-  // font: 18px Anodina-bold;
 }
 
 .imgClose {

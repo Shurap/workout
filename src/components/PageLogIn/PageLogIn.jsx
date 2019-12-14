@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageLogIn.module.css';
+import styles from './PageLogIn.module.scss';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 import { Link } from 'react-router-dom';
 import FormLogInRedux from './FormLogInRedux';

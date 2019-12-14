@@ -13,8 +13,8 @@
   background-color: $button-color;
   border: none;
   border-radius: 20px;
-  // font: 16px Anodina-regular;
-  // color: $text-color;
+  @include font(16px, Regular);
+  color: $text-color;
 
   &:hover {
     background-color: $button-color-hover;

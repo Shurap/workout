@@ -31,8 +31,6 @@
   margin: 10px 10px 5px 10px;
   height: 20px;
   width: 170px;
-  // font: 16px Anodina-regular;
-  // color: $text-color;
 } 
 
 .select {
@@ -44,8 +42,6 @@
   height: 23px;
   width: 170px;
   margin: 5px 10px 10px 10px;
-  // font: 16px Anodina-regular;
-  // color: $text-color;
 }
 
 .select option {
@@ -60,6 +56,4 @@
   @include button(40px, 50px);
   display: flex;
   @include font(9px, Regular);
-  // font: 10px Anodina-regular;
-  // color: $text-color;
 }
