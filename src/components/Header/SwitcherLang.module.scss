@@ -1,0 +1,16 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.switcherlang {
+  // @include test-border(green); 
+  margin-right: 10px;
+  background-color: $general-background-color;
+  @include border-box($border-color);
+  @include font(14px, Regular);
+  color: $text-color;
+}
+
+.switcherlang:focus {
+  outline: none;
+}

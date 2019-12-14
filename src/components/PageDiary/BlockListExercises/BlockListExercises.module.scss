@@ -8,6 +8,7 @@
   width: 260px;
   min-width: 260px;
   overflow: hidden;
+  @include font(14px, Regular);
   @include transition(0.5s);
 }
 

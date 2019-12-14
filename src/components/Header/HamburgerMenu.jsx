@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './HamburgerMenu.module.css';
+import styles from './HamburgerMenu.module.scss';
 import { Link } from 'react-router-dom';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 

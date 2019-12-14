@@ -16,8 +16,8 @@
   // border: 1px solid $border-color;
   // border-radius: 5px;
   // @include test-border(red);
-  font: 14px Anodina-bold;
-  color: $text-color;
+  // font: 14px Anodina-bold;
+  // color: $text-color;
   // overflow: auto;
 }
 
@@ -25,14 +25,14 @@
   // @include test-border(yellow);
   display: flex;
   justify-content: center;
-  font: 14px Anodina-light;
-  color: $text-color-fog;
+  // font: 14px Anodina-light;
+  // color: $text-color-fog;
 }
 
 .wrapperLegend {
   // @include test-border(magenta);
   display: flex;
   justify-content: space-around;
-  font: 14px Anodina-light;
-  color: $text-color-fog;
+  // font: 14px Anodina-light;
+  // color: $text-color-fog;
 }

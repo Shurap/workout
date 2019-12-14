@@ -13,8 +13,8 @@
   background-color: $button-color;
   border: none;
   border-radius: 20px;
-  font: 16px Anodina-regular;
-  color: $text-color;
+  // font: 16px Anodina-regular;
+  // color: $text-color;
 
   &:hover {
     background-color: $button-color-hover;
@@ -67,5 +67,8 @@
   ::-webkit-scrollbar-thumb{
     background-color: $button-color;
   }
-  
 } 
+
+@mixin font($size, $font) {
+  font: $size $font;
+}

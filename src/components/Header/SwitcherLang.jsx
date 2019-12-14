@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SwitcherLang.module.css'
+import styles from './SwitcherLang.module.scss'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeLanguage } from '../../redux/actions/actionLanguage'

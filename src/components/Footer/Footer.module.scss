@@ -1,32 +1,36 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
 .footer {
-  /* border: 2px solid green; */
+  // @include test-border(green);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: $general-background-color;
   height: 70px;
   width: 100%;
-  font-size: 14px;
+  @include font(12px, Regular);
 }
 
 .wrapperMail {
-  /* border: 2px solid magenta; */
+  // @include test-border(magenta);
   display: flex;
   justify-content: center;
   margin-left: 10px;
 }
 
 .wrapperImageMail {
-  /* border: 2px solid green; */
+  // @include test-border(green);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .wrapperTextMail {
-  /* border: 2px solid blue; */
+  // @include test-border(blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,26 +39,26 @@
 }
 
 .imageMail{
-  /* border: 2px solid red; */
+  // @include test-border(red);
   width: 25px;
 }
 
 .wrapperLinked {
-  /* border: 2px solid magenta; */
+  // @include test-border(magenta);
   display: flex;
   justify-content: center;
   margin-left: 10px;
 }
 
 .wrapperImageLinked {
-  /* border: 2px solid green; */
+  // @include test-border(green);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .wrapperTextLinked {
-  /* border: 2px solid blue; */
+  // @include test-border(blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,6 +67,6 @@
 }
 
 .imageLinked{
-  /* border: 2px solid red; */
+  // @include test-border(red);
   width: 25px;
 }

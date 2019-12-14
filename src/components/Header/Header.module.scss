@@ -3,23 +3,20 @@
 @import '../../globalCSS/fonts.scss';
 
 .header {
-  /* border: 3px solid red; */
+  //@include test-border(green);
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgb(26, 25, 25);
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: $general-background-color;
   position: fixed;
   top: 0px;
   height: 70px;
   width: 100%;
   z-index: 100;
-
-  font: 18px Roboto-Bold;
-  color: $text-color;
 }
 
 .wrappingContent {
-  /* border: 3px solid orange; */
+// @include test-border(red);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,13 +24,13 @@
 }
 
 .image {
-  /* border: 3px solid blue; */
+  // @include test-border(blue);
   width: 50px;
   margin-left: 20px;
 }
 
 .wrapperLinks {
-  /* border: 3px solid green; */
+  // @include test-border(green);
   flex-grow: 1;
   display: flex;
   justify-content: space-around;

@@ -6,8 +6,7 @@
   /* border: 5px solid red; */
   margin: 0px;
   padding: 0px;
-
-  font: 16px Roboto-Regular;
+  @include font(16px, Regular);
   color: $text-color;
 }
 
