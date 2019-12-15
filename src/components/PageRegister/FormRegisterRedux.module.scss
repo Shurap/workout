@@ -3,7 +3,7 @@
 @import '../../globalCSS/fonts.scss';
 
 .formLogIn {
-  // @include test-border(red);
+//@include test-border(red);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,14 +11,14 @@
 }
 
 .wrapperBlockInput {
-  // @include test-border(blue);
+//@include test-border(blue);
   display: flex;
   margin-bottom: 40px;
   padding-left: 5px;
 }
 
 .wrapperInput {
-  // @include test-border(red);
+//@include test-border(green);
   display: flex;
   flex-direction: column;
 }

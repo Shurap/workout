@@ -8,6 +8,7 @@ import search from './reducerSearch'
 import windowNewExercise from './reducerWindowNewExercises';
 import visibleListExercises from './reducerVisibleListExercises';
 import windowInfo from './reducerWindowInfo';
+import countVisibleExercises from './reducerCountVisibleExercises';
 import {reducer as formReducer} from 'redux-form';
 
 const reducers = combineReducers({
@@ -20,6 +21,7 @@ const reducers = combineReducers({
   windowNewExercise,
   visibleListExercises,
   windowInfo,
+  countVisibleExercises,
   form: formReducer
 });
 

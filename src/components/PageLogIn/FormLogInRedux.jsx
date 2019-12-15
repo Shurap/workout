@@ -44,6 +44,7 @@ const FormLogIn = (props) => {
             validate={[requiredWithText, minLengthwithText]}
             placeholder={props.dictionary.password}
             autoComplete="off"
+            type="password"
           />
         </div>
       </div>

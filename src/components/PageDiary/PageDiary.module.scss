@@ -1,5 +1,9 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
 .pageDiary {
-    /* border: 5px solid red; */
+    // @include test-border(red);
     margin-top: 70px;
     height: calc(100vh - 140px);
     display: flex;
@@ -10,7 +14,7 @@
 }
 
 .wrapperBlocks {
-    /* border: 5px solid yellow; */
+    // @include test-border(yellow);
     display: flex;
     width: 100%;
 }

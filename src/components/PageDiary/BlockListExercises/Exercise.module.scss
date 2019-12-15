@@ -67,5 +67,5 @@
 
 .buttonDiv {
   @include button(40px, 50px);
-  font-size: 10px;
+  @include font(9px, Regular);
 }

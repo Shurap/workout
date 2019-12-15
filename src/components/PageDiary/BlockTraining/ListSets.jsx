@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import imgAdd from '../../../images/add.png';
 import { bindActionCreators } from 'redux';
 import { doAddNewClearExercise } from '../../../redux/actions/actionDataBase';
+import withTranslator from '../../../hocs/withTranslator/withTranslator';
+
 
 const ListSets = (props) => {
 
@@ -29,8 +31,8 @@ const ListSets = (props) => {
   return (
     <div className={styles.listSets}>
       <div className={styles.wrapperText}>
-        <div className={styles.wrapperWeight}>weight</div>
-        <div className={styles.wrapperRepeat}>repeat</div>
+        <div className={styles.wrapperWeight}>{props.dictionary.weight}</div>
+        <div className={styles.wrapperRepeat}>{props.dictionary.repeat}</div>
       </div>
       <div className={styles.wrapperSets}>
         <div className={styles.scroll}>
@@ -39,7 +41,6 @@ const ListSets = (props) => {
 
         <div className={styles.wrapperButton}>
           <div className={styles.button} onClick={onClickButton}>
-            {/* {props.dictionary.panelButtonCancel} */}
             <img src={imgAdd} alt="" />
           </div>
         </div>
@@ -58,4 +59,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   doAddNewClearExercise
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListSets);
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslator(ListSets));

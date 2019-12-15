@@ -1,5 +1,9 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
 .pageRegister {
-  /* border: 2px solid hotpink; */
+  //@include test-border(green);
   margin-top: 70px;
   min-height: calc(100vh - 140px);
   display: flex;
@@ -12,12 +16,12 @@
 }
 
 .window {
-  /* border: 2px solid red;  */
+  //@include test-border(red);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: $general-background-color;
   width: 300px;
   height: 500px;
   padding-top: 50px;
@@ -25,27 +29,6 @@
   margin: 20px;
 }
 
-.image {
-  /* border: 2px solid blue; */
-  width: 200px;
-  animation: rotate 2s forwards;
-}
-
 .gag {
   height: 50px;
-}
-
-/* .wrappedText {
-  border: 2px solid magenta;
-  color: white;
-} */
-
-/* .links {
-  color: #4b18d9;
-  margin: 5px;
-} */
-
-@keyframes rotate {
-  0% {transform: rotate(0)}
-  100% {transform: rotate(360deg)}
 }

@@ -6,7 +6,6 @@ import ListTrainingExercises from './ListTrainingExercises';
 const DayOfExercises = (props) => {
 
   const [visible, setVisible] = useState(false);
-  console.log(visible)
 
   const onVisible = () => {
     setVisible(!visible);

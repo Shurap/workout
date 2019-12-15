@@ -17,10 +17,9 @@ const ListDayOfExercises = (props) => {
 
   return (
     <div className={styles.listDayOfExercises}>
-      {arrayDates.reverse()}
+      {arrayDates}
     </div>
   )
-
 }
 
 const mapStateToProps = (state) => ({

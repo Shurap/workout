@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { getSetsFromStore } from '../../../selectors/getSetsFromStore';
 import { bindActionCreators } from 'redux';
 import { doDeleteSet, doAddValueSet } from '../../../redux/actions/actionDataBase';
+import withTranslator from '../../../hocs/withTranslator/withTranslator';
 
 const Set = (props) => {
 
@@ -33,9 +34,11 @@ const Set = (props) => {
       <div className={(size) ? styles.setBig : styles.setSmall} onClick={onClickPanel}>
 
         <div className={styles.wrapperSetImage}>
-          <div className={styles.wrapperSet}>set {props.number + 1}</div>
+          <div className={(size) ? styles.wrapperSetBig : styles.wrapperSetSmall}>
+            {props.dictionary.set} {props.number + 1}
+          </div>
 
-          <div className={styles.imgClose} onClick={onClickButtonDelete}>
+          <div className={styles.imgDelete} onClick={onClickButtonDelete}>
             {(size) ? <img src={imgDelete} alt="" /> : null}
           </div>
         </div>
@@ -44,7 +47,8 @@ const Set = (props) => {
         {
           (size) ?
             <EditWithButtons
-              target='wight'
+              note={props.dictionary.weight}
+              target="wight"
               label={props.weight}
               date={props.date}
               exercise={props.exercise}
@@ -56,13 +60,14 @@ const Set = (props) => {
         {
           (size) ?
             <EditWithButtons
-              target='count'
+              note={props.dictionary.repeat}
+              target="count"
               label={props.count}
               date={props.date}
               exercise={props.exercise}
               number={props.number}
             /> :
-            <div className={styles.wrapperWeight}>{props.count}</div>
+            <div className={styles.wrapperRepeat}>{props.count}</div>
         }
       </div>
       <div
@@ -83,4 +88,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   doAddValueSet
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Set);
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslator(Set));

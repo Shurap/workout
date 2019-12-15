@@ -12,14 +12,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: $general-background-color;
+  background-color: $general-background-color-middle;
   height: 30px;
-  padding-left: 20px;
+  padding-left: 10px;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .imgInfo {
+  // @include test-border(blue);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-right: 10px;
   cursor: pointer;
 }

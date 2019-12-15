@@ -50,6 +50,7 @@
   &:focus {
     border-right: 1px solid $border-box-active-color;
     border-bottom: 1px solid $border-box-active-color;
+    outline: none;
   }
 }
 

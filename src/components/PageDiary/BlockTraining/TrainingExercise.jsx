@@ -5,12 +5,10 @@ import imgInfo from '../../../images/info.png'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeVisibleWindowInfoToStore } from '../../../redux/actions/actionWindowInfo';
-// import { doGetDataToInfo } from '../../../redux/actions/actionDataBase';
 
 const TrainingExercise = (props) => {
 
   const onClickButtonInfo = () => {
-    // props.doGetDataToInfo(props.date, props.exercise);
     props.changeVisibleWindowInfoToStore(true, props.exercise)
   }
 
@@ -33,7 +31,6 @@ const TrainingExercise = (props) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  // doGetDataToInfo
   changeVisibleWindowInfoToStore
 }, dispatch);
 

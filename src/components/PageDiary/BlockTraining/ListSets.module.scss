@@ -4,7 +4,7 @@
 
 .listSets {
   // @include test-border(yellow);
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: $general-background-color-middle;
   display: flex;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .wrapperSets {
-  /* border: 2px solid red; */
+  // @include test-border(red);
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -32,21 +32,24 @@
 }
 
 .wrapperWeight {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  @include font(10px, Regular);
   color: $text-color-fog;
 }
 
 .wrapperRepeat {
   padding-bottom: 4px;
+  @include font(10px, Regular);
   color: $text-color-fog;
 }
 
 .button {
   @include button(30px, 40px);
   margin: 5px;
-  // background: radial-gradient(at center, rgba(0, 0, 0, 0.1), #4b18d9);  border: none;
   border-radius: 20px;
-  background: radial-gradient(90% 90%, rgba(0, 0, 0, 0.1), #4b18d9);  border: none;
+  background: radial-gradient(rgba(0, 0, 0, 0.1), #4b18d9);  
+  border: none;
+  cursor: pointer;
 }
 
 .wrapperButton {

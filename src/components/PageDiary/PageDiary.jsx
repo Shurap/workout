@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageDiary.module.css';
+import styles from './PageDiary.module.scss';
 import BlockListExercise from './BlockListExercises';
 import BlockTraining from './BlockTraining';
 import WindowNewExercise from './WindowNewExercise/WindowNewExercise';
