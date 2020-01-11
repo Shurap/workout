@@ -1,49 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import styles from './WindowInfo.module.scss';
 import { bindActionCreators } from 'redux';
 import { changeVisibleWindowInfoToStore } from '../../../redux/actions/actionWindowInfo';
+import { changeVisibleWindowEditToStore } from '../../../redux/actions/actionWindowEdit';
 import {
   getNoteToWindowInfoFromStore,
   getImageToWindowInfoFromStore,
-  // getThreeExercisesToWindowInfoFromStore
 } from '../../../selectors/getDataToWindowInfoFromStore';
 import withImages from '../../../hocs/withImage/withImage';
 import HistoryBox from './HistoryBox';
+import imgEdit from '../../../images/edit.png';
+import imgSave from '../../../images/save.png';
+import Info from './Info';
+import Edit from './Edit';
 
 const WindowInfo = (props) => {
 
+  const [modeEdit, setModeEdit] = useState(false);
+
   const onClose = () => {
-    props.changeVisibleWindowInfoToStore(false)
+    props.changeVisibleWindowInfoToStore(false, '')
+    setModeEdit(false);
   }
 
-  // console.log(props.threeExercises)
+  const onClickButtonEdit = (event) => {
+    event.stopPropagation();
+    props.changeVisibleWindowEditToStore(true, props.nameExercise);
+    onClose();
+    // setModeEdit(true);
+    // console.log('edit')
+  }
+
+  // const onClickButtonSave = (event) => {
+  //   event.stopPropagation();
+  //   console.log('save')
+  // }
 
   return (
     <div
       className={(props.windowVisible) ?
-        styles.windowInfoVisible : styles.windowInfoHide}
+        styles.windowInfoVisible :
+        styles.windowInfoHide}
       onClick={onClose}
     >
-      <div className={styles.window}>
-        <div className={styles.block}>
-          <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
-        </div>
+      {(modeEdit) ?
+        <Edit /> :
+        <Info
+          nameExercise={props.nameExercise}
+          noteExercise={props.noteExercise}
+          imageExercise={props.imageExercise}
+          onClickButtonEdit={onClickButtonEdit}
+        />
+      }
 
-        <div className={styles.block}>
-          <div className={styles.wrapperExercise}>
-            {props.nameExercise}
-          </div>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.wrapperNote}>
-            {props.noteExercise}
-          </div>
-        </div>
-
-        <HistoryBox />
-      </div>
     </div>
   )
 }
@@ -53,11 +63,11 @@ const mapStateToProps = (state) => ({
   noteExercise: getNoteToWindowInfoFromStore(state),
   imageExercise: getImageToWindowInfoFromStore(state),
   nameExercise: state.windowInfo.exercise,
-  // threeExercises: getThreeExercisesToWindowInfoFromStore(state),
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  changeVisibleWindowInfoToStore
+  changeVisibleWindowInfoToStore,
+  changeVisibleWindowEditToStore,
 }, dispatch);
 
 export default withImages(connect(mapStateToProps, mapDispatchToProps)(WindowInfo));

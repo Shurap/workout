@@ -1,0 +1,35 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.windowEditHide {
+  display: none;
+}
+
+.windowEditVisible {
+  // @include test-border(green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include font(14px, Regular);
+  color: $text-color;
+}
+
+.window {
+  // @include test-border(green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $general-background-color;
+  width: 300px;
+  height: 500px;
+  padding-top: 20px;
+  margin: 20px;
+}

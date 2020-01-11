@@ -1,0 +1,90 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.formEdit {
+  @include test-border(red);
+  width: 100%;
+}
+
+.wrapperImages {
+  @include test-border(green);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.wrapperImage {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: auto;
+  // margin: auto auto 20px auto;
+  margin: auto auto auto auto;
+  padding-left: 70px;
+}
+
+.wrapperSvg {
+  // @include test-border(blue);
+  width: 24px;
+  height: 24px;
+  margin: 0 0 auto auto;
+  padding-right: 20px;
+}
+
+.wrapperSelect {
+  @include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  @extend .textInput;
+  margin: 20px;
+}
+
+.select option {
+  background: $general-background-color;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.textInput {
+  color: white;
+  background-color: transparent;
+  @include border-box($border-color);
+  text-align: left;
+  font-size: 16px;
+  margin: 5px 5px 5px 5px;
+} 
+
+.textareaExercise {
+  // @include border-box($border-color); 
+  border: none; 
+  background-color: transparent;
+  color: $text-color-fog;
+  resize: none;
+  height: 40px;
+  width: 250px;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.textareaNote {
+  @include border-box($border-color);  
+  background-color: transparent;
+  color: $text-color-fog;
+  resize: none;
+  height: 100px;
+  width: 250px;
+  padding: 5px;
+  margin-bottom: 10px;
+}

@@ -1,5 +1,6 @@
 @import '../../../globalCSS/variables.scss';
 @import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
 
 .windowInfoHide {
   display: none;
@@ -16,59 +17,77 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7)
-}
-
-.window {
-  // @include test-border(red);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // justify-content: space-between;
-  background-color: $general-background-color;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include font(14px, Regular);
   color: $text-color;
-  width: 300px;
-  height: 500px;
-  padding-top: 20px;
-  // padding-bottom: 30px;
-  margin: 20px;
 }
 
-.image {
-  // @include test-border(blue);
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  width: auto;
-  margin-bottom: 20px;
-  
-}
+// .window {
+//   // @include test-border(red);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: $general-background-color;
+//   width: 300px;
+//   height: 500px;
+//   padding-top: 20px;
+//   margin: 20px;
+// }
 
-.block {
-  display: block;
-}
+// .wrapperImage {
+//   // @include test-border(green);
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+// }
 
-.wrapperExercise {
-  @include border-box($border-color);  
-  display: flex;
-  
-  
-  align-items: center;
-  justify-content: center;
-  // margin: 2px;
-  height: 40px;
-  width: 250px;
-  margin-bottom: 20px;
-  padding: 5px;
-}
+// .image {
+//   // @include test-border(blue);
+//   display: flex;
+//   justify-content: center;
+//   height: 100px;
+//   width: auto;
+//   margin: auto auto 20px auto;
+//   padding-left: 70px;
+// }
 
-.wrapperNote {
-  @include border-box($border-color);  
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 250px;
-  padding: 5px;
-  margin-bottom: 20px;
-}
+// .button {
+//   width: 24px;
+//   height: 24px;
+//   margin: 0 0 auto auto;
+//   padding-right: 20px;
+//   cursor: pointer;
+// }
+
+// .block {
+//   // @include test-border(red);
+//   display: block;
+// }
+
+// .textareaNote {
+//   @include border-box($border-color);  
+//   background-color: transparent;
+//   color: $text-color-fog;
+//   resize: none;
+//   height: 100px;
+//   width: 250px;
+//   padding: 5px;
+//   margin-bottom: 20px;
+// }
+
+// .textareaExercise {
+//   // @include border-box($border-color); 
+//   border: none; 
+//   background-color: transparent;
+//   color: $text-color-fog;
+//   resize: none;
+//   height: 40px;
+//   width: 250px;
+//   padding: 5px;
+//   margin-bottom: 20px;
+
+//   text-align: justify;
+//   -moz-text-align-last: center;
+//   text-align-last: center;
+
+// }
