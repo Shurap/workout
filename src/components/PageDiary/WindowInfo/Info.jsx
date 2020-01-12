@@ -1,24 +1,16 @@
 import React from 'react';
 import HistoryBox from './HistoryBox';
-import imgEdit from '../../../images/edit.png';
 import styles from './Info.module.scss';
 import withImages from '../../../hocs/withImage/withImage';
-
+import withTranslator from '../../../hocs/withTranslator/withTranslator';
 
 const Info = (props) => {
   return (
     <div className={styles.window}>
-      <div className={styles.wrapperImage}>
-        <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
-        <img
-          className={styles.button}
-          src={imgEdit}
-          alt=""
-          onClick={props.onClickButtonEdit}
-        />
-      </div>
 
-      <div className={styles.wrapperImageName}>{props.imageExercise}</div>
+      <div className={styles.wrapperText}>
+        Information about exercise
+      </div>
 
       <div className={styles.block}>
         <textarea
@@ -28,6 +20,12 @@ const Info = (props) => {
           value={props.nameExercise}
         />
       </div>
+
+      <div className={styles.wrapperImage}>
+        <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
+      </div>
+
+      <div className={styles.wrapperImageName}>{props.imageExercise}</div>
 
       <div className={styles.block}>
         <textarea
@@ -39,8 +37,16 @@ const Info = (props) => {
       </div>
 
       <HistoryBox />
+
+      <button
+        className={styles.button}
+        onClick={props.onClickButtonEdit}
+      >
+        {props.dictionary.windowInfoEdit}
+      </button>
+      
     </div>
   )
 }
 
-export default withImages(Info);
+export default withTranslator(withImages(Info));

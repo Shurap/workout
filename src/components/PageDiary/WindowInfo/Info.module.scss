@@ -10,8 +10,12 @@
   background-color: $general-background-color;
   width: 300px;
   height: 500px;
-  padding-top: 20px;
-  margin: 20px;
+}
+
+.wrapperText {
+  // @include test-border(yellow);
+  margin: 10px auto 10px auto;
+  color: $text-color-fog;
 }
 
 .wrapperImage {
@@ -19,6 +23,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin: auto auto 5px auto;
 }
 
 .image {
@@ -27,27 +32,33 @@
   justify-content: center;
   height: 100px;
   width: auto;
-  margin: auto auto 20px auto;
-  padding-left: 70px;
-}
-
-.button {
-  width: 24px;
-  height: 24px;
-  margin: 0 0 auto auto;
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.block {
-  // @include test-border(red);
-  display: block;
 }
 
 .wrapperImageName {
-  // @include test-border(red);
-  margin-bottom: 10px;
+  // @include test-border(magenta);
+  margin: auto auto 5px auto;
   color: $text-color-fog;
+}
+
+.block {
+  // @include test-border(white);
+  display: block;
+  margin: 5px;
+}
+
+.textareaExercise {
+  @include border-box($border-color); 
+  border: none; 
+  background-color: transparent;
+  color: $text-color;
+  resize: none;
+  height: 30px;
+  width: 250px;
+
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+
 }
 
 .textareaNote {
@@ -55,25 +66,11 @@
   background-color: transparent;
   color: $text-color-fog;
   resize: none;
-  height: 100px;
+  height: 50px;
   width: 250px;
-  padding: 5px;
-  margin-bottom: 10px;
 }
 
-.textareaExercise {
-  // @include border-box($border-color); 
-  border: none; 
-  background-color: transparent;
-  color: $text-color-fog;
-  resize: none;
-  height: 40px;
-  width: 250px;
-  padding: 5px;
-  margin-bottom: 10px;
-
-  text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
-
+.button {
+  @include button(40px, 240px);
+  margin: 10px 20px 10px;
 }

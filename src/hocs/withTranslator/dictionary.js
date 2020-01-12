@@ -57,6 +57,7 @@ const dictionary = {
     weight: 'Weight',
     repeat: 'Repeat',
     set: 'Set',
+    windowInfoEdit: 'Edit exercise',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -117,6 +118,7 @@ const dictionary = {
     weight: 'Вес',
     repeat: 'Повтор',
     set: 'Сет',
+    windowInfoEdit: 'Редактировать',
   }
 }
 

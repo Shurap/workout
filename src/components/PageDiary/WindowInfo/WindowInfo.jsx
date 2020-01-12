@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import styles from './WindowInfo.module.scss';
 import { bindActionCreators } from 'redux';
@@ -9,33 +9,19 @@ import {
   getImageToWindowInfoFromStore,
 } from '../../../selectors/getDataToWindowInfoFromStore';
 import withImages from '../../../hocs/withImage/withImage';
-import HistoryBox from './HistoryBox';
-import imgEdit from '../../../images/edit.png';
-import imgSave from '../../../images/save.png';
 import Info from './Info';
-import Edit from './Edit';
 
 const WindowInfo = (props) => {
 
-  const [modeEdit, setModeEdit] = useState(false);
-
   const onClose = () => {
     props.changeVisibleWindowInfoToStore(false, '')
-    setModeEdit(false);
   }
 
   const onClickButtonEdit = (event) => {
     event.stopPropagation();
     props.changeVisibleWindowEditToStore(true, props.nameExercise);
     onClose();
-    // setModeEdit(true);
-    // console.log('edit')
   }
-
-  // const onClickButtonSave = (event) => {
-  //   event.stopPropagation();
-  //   console.log('save')
-  // }
 
   return (
     <div
@@ -44,16 +30,12 @@ const WindowInfo = (props) => {
         styles.windowInfoHide}
       onClick={onClose}
     >
-      {(modeEdit) ?
-        <Edit /> :
-        <Info
-          nameExercise={props.nameExercise}
-          noteExercise={props.noteExercise}
-          imageExercise={props.imageExercise}
-          onClickButtonEdit={onClickButtonEdit}
-        />
-      }
-
+      <Info
+        nameExercise={props.nameExercise}
+        noteExercise={props.noteExercise}
+        imageExercise={props.imageExercise}
+        onClickButtonEdit={onClickButtonEdit}
+      />
     </div>
   )
 }

@@ -14,6 +14,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -21,73 +22,3 @@
   @include font(14px, Regular);
   color: $text-color;
 }
-
-// .window {
-//   // @include test-border(red);
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   background-color: $general-background-color;
-//   width: 300px;
-//   height: 500px;
-//   padding-top: 20px;
-//   margin: 20px;
-// }
-
-// .wrapperImage {
-//   // @include test-border(green);
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
-// }
-
-// .image {
-//   // @include test-border(blue);
-//   display: flex;
-//   justify-content: center;
-//   height: 100px;
-//   width: auto;
-//   margin: auto auto 20px auto;
-//   padding-left: 70px;
-// }
-
-// .button {
-//   width: 24px;
-//   height: 24px;
-//   margin: 0 0 auto auto;
-//   padding-right: 20px;
-//   cursor: pointer;
-// }
-
-// .block {
-//   // @include test-border(red);
-//   display: block;
-// }
-
-// .textareaNote {
-//   @include border-box($border-color);  
-//   background-color: transparent;
-//   color: $text-color-fog;
-//   resize: none;
-//   height: 100px;
-//   width: 250px;
-//   padding: 5px;
-//   margin-bottom: 20px;
-// }
-
-// .textareaExercise {
-//   // @include border-box($border-color); 
-//   border: none; 
-//   background-color: transparent;
-//   color: $text-color-fog;
-//   resize: none;
-//   height: 40px;
-//   width: 250px;
-//   padding: 5px;
-//   margin-bottom: 20px;
-
-//   text-align: justify;
-//   -moz-text-align-last: center;
-//   text-align-last: center;
-
-// }

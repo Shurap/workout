@@ -2,8 +2,16 @@ import React from 'react';
 import styles from './WindowEdit.module.scss';
 import { connect } from 'react-redux';
 import FormEditRedux from './FormEditRedux';
+import { bindActionCreators } from 'redux';
+
+import { changeVisibleWindowEditToStore } from '../../../redux/actions/actionWindowEdit';
 
 const WindowEdit = (props) => {
+
+  const onClose = () => {
+    props.changeVisibleWindowEditToStore(false, '')
+  }
+
   return (
     <div
       className={(props.windowVisible) ?
@@ -12,6 +20,9 @@ const WindowEdit = (props) => {
     >
       <div className={styles.window}>
         <FormEditRedux />
+        <button onClick={onClose}>
+          Close
+        </button>
       </div>
     </div>
   )
@@ -21,4 +32,8 @@ const mapStateToProps = (state) => ({
   windowVisible: state.windowEdit.visible,
 });
 
-export default connect(mapStateToProps)(WindowEdit);
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  changeVisibleWindowEditToStore,
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(WindowEdit);
