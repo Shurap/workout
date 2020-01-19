@@ -7,7 +7,6 @@ const CurrentImage = (props) => {
 
   return (
     <div className={styles.currentImage}>
-      {props.imageName}
       <img className={styles.image} src={props.imageShow[props.imageName]} alt="" />
     </div>
   )

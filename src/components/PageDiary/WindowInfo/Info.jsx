@@ -9,7 +9,7 @@ const Info = (props) => {
     <div className={styles.window}>
 
       <div className={styles.wrapperText}>
-        Information about exercise
+        {props.dictionary.windowInfo}
       </div>
 
       <div className={styles.block}>
@@ -22,6 +22,7 @@ const Info = (props) => {
       </div>
 
       <div className={styles.wrapperImage}>
+         {/* Why not CurrentImage */}
         <img className={styles.image} src={props.imageShow[props.imageExercise]} alt="" />
       </div>
 
@@ -44,7 +45,7 @@ const Info = (props) => {
       >
         {props.dictionary.windowInfoEdit}
       </button>
-      
+
     </div>
   )
 }

@@ -4,6 +4,7 @@ import styles from './WindowInfo.module.scss';
 import { bindActionCreators } from 'redux';
 import { changeVisibleWindowInfoToStore } from '../../../redux/actions/actionWindowInfo';
 import { changeVisibleWindowEditToStore } from '../../../redux/actions/actionWindowEdit';
+import { changeCurrentImageInStore } from '../../../redux/actions/actionCurrentImage';
 import {
   getNoteToWindowInfoFromStore,
   getImageToWindowInfoFromStore,
@@ -19,6 +20,7 @@ const WindowInfo = (props) => {
 
   const onClickButtonEdit = (event) => {
     event.stopPropagation();
+    props.changeCurrentImageInStore(props.imageExercise);
     props.changeVisibleWindowEditToStore(true, props.nameExercise);
     onClose();
   }
@@ -50,6 +52,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   changeVisibleWindowInfoToStore,
   changeVisibleWindowEditToStore,
+  changeCurrentImageInStore,
 }, dispatch);
 
 export default withImages(connect(mapStateToProps, mapDispatchToProps)(WindowInfo));

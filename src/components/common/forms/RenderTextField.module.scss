@@ -1,6 +1,11 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
 .renderTextField {
-  /* border: 1px solid red; */
+  // border: 1px solid red;
   position: relative;
+  // @include font(14px, Regular);
 }
 
 .errorHide {

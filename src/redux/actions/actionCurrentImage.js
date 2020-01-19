@@ -1,10 +1,10 @@
 import {
-  CHANGE_IMAGE_IN_STORE
+  CHANGE_CURRENT_IMAGE_IN_STORE
 } from '../constants';
 
-export function changeImageInStore(data) {
+export function changeCurrentImageInStore(data) {
   return {
-    type: CHANGE_IMAGE_IN_STORE,
+    type: CHANGE_CURRENT_IMAGE_IN_STORE,
     data
   }
 }

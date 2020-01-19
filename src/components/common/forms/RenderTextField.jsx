@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './RenderTextField.module.css';
+import styles from './RenderTextField.module.scss';
 
 const RenderTextField = ({ input, meta, ...props }) => {
 

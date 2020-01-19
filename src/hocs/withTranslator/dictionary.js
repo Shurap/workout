@@ -58,6 +58,7 @@ const dictionary = {
     repeat: 'Repeat',
     set: 'Set',
     windowInfoEdit: 'Edit exercise',
+    windowInfo: 'Information about exercise',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -119,6 +120,7 @@ const dictionary = {
     repeat: 'Повтор',
     set: 'Сет',
     windowInfoEdit: 'Редактировать',
+    windowInfo: 'Информация об упражнении',
   }
 }
 

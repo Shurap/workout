@@ -1,16 +1,16 @@
 import {
-  CHANGE_IMAGE_IN_STORE, 
+  CHANGE_CURRENT_IMAGE_IN_STORE, 
 } from '../constants';
 import { merge } from 'ramda';
 
 const initialState = {
-  currentImage: 'None'
+  currentImage: 'No group'
 };
 
 function currentImage(state = initialState, action) {
   switch (action.type) {
 
-    case CHANGE_IMAGE_IN_STORE:
+    case CHANGE_CURRENT_IMAGE_IN_STORE:
       return merge(state, { currentImage: action.data });
 
     default:

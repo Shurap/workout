@@ -18,7 +18,10 @@ const FormNewExercise = (props) => {
   }
 
   return (
-    <form className={styles.formNewExercise} onSubmit={props.handleSubmit}>
+    <form
+      className={styles.formNewExercise}
+      onSubmit={props.handleSubmit}
+    >
 
       <div className={styles.wrapperBlockSelect}>
         <ImageExercise />
