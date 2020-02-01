@@ -23,8 +23,6 @@ const FormEdit = (props) => {
     props.changeCurrentImageInStore(event.target.value);
   }
 
-  console.log('edit', props.group);
-
   return (
     <div className={styles.window}>
       <form

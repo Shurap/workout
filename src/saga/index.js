@@ -8,6 +8,7 @@ import { sentExerciseToBaseSaga } from './sagas/sentExerciseToBaseSaga';
 import { addNewClearExerciseSaga } from './sagas/addNewClearExerciseSaga';
 import { deleteSetSaga } from './sagas/deleteSetSaga';
 import { addValueSetSaga } from './sagas/addValueSetSaga';
+import { changeExerciseInBaseSaga } from './sagas/changeExerciseInBaseSaga';
 // import { getDataToInfoSaga } from './sagas/getDataToInfoSaga';
 
 export function* mainSaga() {
@@ -21,6 +22,7 @@ export function* mainSaga() {
     fork(addNewClearExerciseSaga),
     fork(deleteSetSaga),
     fork(addValueSetSaga),
+    fork(changeExerciseInBaseSaga),
     // fork(getDataToInfoSaga),
   ])
 }

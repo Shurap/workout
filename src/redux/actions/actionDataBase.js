@@ -3,6 +3,7 @@ import {
   DO_ADD_NEW_CLEAR_EXERCISE,
   DO_DELETE_SET,
   DO_ADD_VALUE_SET,
+  DO_CHANGE_EXERCISE,
   // DO_GET_DATA_TO_INFO,
 } from '../constants';
 
@@ -38,6 +39,14 @@ export function doAddValueSet(date, exercise, array) {
     date,
     exercise,
     array
+  }
+}
+
+export function doChangeExercise(data, exerciseName) {
+  return {
+    type: DO_CHANGE_EXERCISE,
+    data,
+    exerciseName
   }
 }
 
