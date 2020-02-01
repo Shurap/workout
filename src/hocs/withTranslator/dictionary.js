@@ -59,6 +59,8 @@ const dictionary = {
     set: 'Set',
     windowInfoEdit: 'Edit exercise',
     windowInfo: 'Information about exercise',
+    buttonSave: 'Save',
+    buttonCancel: 'Cancel',
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -121,6 +123,9 @@ const dictionary = {
     set: 'Сет',
     windowInfoEdit: 'Редактировать',
     windowInfo: 'Информация об упражнении',
+    buttonSave: 'Сохранить',
+    buttonCancel: 'Отменить',
+
   }
 }
 

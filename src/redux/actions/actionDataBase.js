@@ -4,7 +4,6 @@ import {
   DO_DELETE_SET,
   DO_ADD_VALUE_SET,
   DO_CHANGE_EXERCISE,
-  // DO_GET_DATA_TO_INFO,
 } from '../constants';
 
 export function doSentExercise(data) {
@@ -49,11 +48,3 @@ export function doChangeExercise(data, exerciseName) {
     exerciseName
   }
 }
-
-// export function doGetDataToInfo(date, exercise) {
-//   return {
-//     type: DO_GET_DATA_TO_INFO,
-//     date,
-//     exercise
-//   }
-// }

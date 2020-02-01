@@ -31,7 +31,7 @@ const FormEdit = (props) => {
       >
 
         <div className={styles.wrapperText}>
-          Edit exercise
+          {props.dictionary.windowInfoEdit}
         </div>
 
         <Field
@@ -80,7 +80,9 @@ const FormEdit = (props) => {
           autoComplete="off"
         />
 
-        <button className={styles.button}>Save</button>
+        <button className={styles.button}>
+          {props.dictionary.buttonSave}
+        </button>
 
       </form>
 
@@ -88,7 +90,7 @@ const FormEdit = (props) => {
         className={styles.button}
         onClick={onClose}
       >
-        Cancel
+        {props.dictionary.buttonCancel}
       </button>
 
     </div>

@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FormEditRedux from './FormEditRedux';
 import { doChangeExercise } from '../../../redux/actions/actionDataBase';
+import { changeVisibleWindowEditToStore } from '../../../redux/actions/actionWindowEdit';
+import Spinner from '../../common/Spinner';
 
 const WindowEdit = (props) => {
 
   const onSubmit = (data) => {
-    // console.log('submit', props.exerciseName)
     props.doChangeExercise(data, props.exerciseName);
   }
 
@@ -18,6 +19,7 @@ const WindowEdit = (props) => {
         styles.windowEditVisible :
         styles.windowEditHide}
     >
+      <Spinner />
       <FormEditRedux onSubmit={onSubmit} />
     </div>
   )
@@ -29,7 +31,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  doChangeExercise
+  doChangeExercise,
+  changeVisibleWindowEditToStore
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(WindowEdit);
