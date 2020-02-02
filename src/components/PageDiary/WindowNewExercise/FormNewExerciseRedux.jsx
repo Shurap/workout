@@ -30,10 +30,6 @@ const FormNewExercise = (props) => {
           component={RenderSelectField}
           name='group'
           onChange={onChange}
-          // defaultValue="adsafdsf"
-          // selectedvalue='No group'
-          // validate={[requiredWithText, emailTrueText]}
-          // placeholder={props.dictionary.email}
           autoComplete="off"
         >
           <option value="No group">{props.dictionary.muscleNone}</option>

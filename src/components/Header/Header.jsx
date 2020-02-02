@@ -23,7 +23,6 @@ const Header = (props) => {
         </div>
         <div className={styles.gag}></div>
         <SwitcherLang />
-        {/* <AuthUser /> */}
       </div>
       <HamburgerMenu />
     </div>
