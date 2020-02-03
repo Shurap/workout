@@ -9,7 +9,6 @@ import { changeVisibleWindowEditToStore } from '../../redux/actions/actionWindow
   function* doChangeExerciseInBaseSaga({ data, exerciseName }) {
     try {
       yield put(loadingBeginToStore());
-
       const sendData = {
         date: (data.group) ? data.group : 'No group',
         data: (data.notes) ? data.notes : ''

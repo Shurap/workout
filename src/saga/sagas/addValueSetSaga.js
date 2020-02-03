@@ -6,7 +6,6 @@ import { addErrorToStore } from '../../redux/actions/actionError';
 
 function* doAddValueSetSaga({ date, exercise, array }) {
   try {
-    
     yield put(loadingBeginToStore());
     const ref = yield firebase.db.ref(`user/${firebase.auth.currentUser.uid}/schedule/${date}/${exercise}`);
     yield ref.set(array);

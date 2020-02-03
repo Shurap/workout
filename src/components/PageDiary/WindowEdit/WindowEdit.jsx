@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import FormEditRedux from './FormEditRedux';
 import { doChangeExercise } from '../../../redux/actions/actionDataBase';
 import { changeVisibleWindowEditToStore } from '../../../redux/actions/actionWindowEdit';
-import Spinner from '../../common/Spinner';
 
 const WindowEdit = (props) => {
 
@@ -19,7 +18,6 @@ const WindowEdit = (props) => {
         styles.windowEditVisible :
         styles.windowEditHide}
     >
-      <Spinner />
       <FormEditRedux onSubmit={onSubmit} />
     </div>
   )

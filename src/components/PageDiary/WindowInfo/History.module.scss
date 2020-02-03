@@ -4,8 +4,6 @@
 
 .wrapperData {
   // @include test-border(brown);
-  // display: flex;
-  // flex-direction: column;
   height: 120px;
   overflow: auto;
 }
@@ -13,10 +11,6 @@
 .history {
   display: flex;
   justify-content: space-around;
-  // border: 1px solid $border-color;
-  // border-radius: 5px;
-  // @include test-border(red);
-  // overflow: auto;
 }
 
 .wrapperDate {

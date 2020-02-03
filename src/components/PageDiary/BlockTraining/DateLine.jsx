@@ -4,10 +4,6 @@ import imgFold from '../../../images/next.png';
 
 const DateLine = (props) => {
 
-  // const onClickFold = () => {
-  //   console.log('fold');
-  // }
-
   return (
     <div className={styles.dateLine} onClick={props.onVisible}>
       {props.date}

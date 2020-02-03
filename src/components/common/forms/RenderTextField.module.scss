@@ -3,7 +3,6 @@
 @import '../../../globalCSS/fonts.scss';
 
 .renderTextField {
-  // border: 1px solid red;
   position: relative;
 }
 
@@ -29,13 +28,12 @@
 }
 
 .errorVisible:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 30px;
-    left: 40px;
-    border: 10px solid;  
-    border-color: orange rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: 40px;
+  border: 10px solid;
+  border-color: orange rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
 }
-

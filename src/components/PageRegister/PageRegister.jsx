@@ -8,8 +8,6 @@ import { bindActionCreators } from 'redux';
 import { doRegister } from '../../redux/actions/actionRegister';
 import { withRouter } from 'react-router-dom';
 
-import Spinner from '../common/Spinner';
-
 const PageRegister = (props) => {
 
   const onSubmit = (data) => {
@@ -21,7 +19,6 @@ const PageRegister = (props) => {
       <div className={styles.window}>
         <SvgBarbell />
         <div className={styles.gag}></div>
-        <Spinner />
         <FormRegisterRedux onSubmit={onSubmit} />
       </div>
     </div >

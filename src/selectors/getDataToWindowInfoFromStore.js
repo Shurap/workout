@@ -41,7 +41,6 @@ export const getThreeExercisesToWindowInfoFromStore = createSelector(
         array[array.length - 2],
         array[array.length - 1]
       ];
-      // console.log('8', result)
       return result;
     }
     return result = [];

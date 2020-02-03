@@ -26,10 +26,8 @@ const DayOfExercises = (props) => {
       <div className={styles.footer}>
       </div>
 
-
     </div>
   )
-
 }
 
 export default DayOfExercises;

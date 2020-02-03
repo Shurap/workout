@@ -1,14 +1,15 @@
 @import '../../globalCSS/variables.scss';
+@import '../../globalCSS/mixins.scss';
 
 .spinnerVisible {
-  display: flex;
+  // @include test-border(red);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
   width: 100px;
   height: 100px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
 }
 
 .spinnerHide {

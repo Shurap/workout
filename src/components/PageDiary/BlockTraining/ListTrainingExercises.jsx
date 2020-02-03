@@ -21,7 +21,6 @@ const ListTrainingExrcises = (props) => {
       {arrayOfExercises}
     </div>
   )
-
 }
 
 const mapStateToProps = (state, ownProps) => ({

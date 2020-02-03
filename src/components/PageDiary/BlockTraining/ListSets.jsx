@@ -8,7 +8,6 @@ import { bindActionCreators } from 'redux';
 import { doAddNewClearExercise } from '../../../redux/actions/actionDataBase';
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 
-
 const ListSets = (props) => {
 
   const onClickButton = () => {
