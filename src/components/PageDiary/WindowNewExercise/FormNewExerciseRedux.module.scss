@@ -1,57 +1,79 @@
 @import '../../../globalCSS/variables.scss';
 @import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.window {
+  // @include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $general-background-color;
+  width: 300px;
+  height: 500px;
+}
 
 .formNewExercise {
-  // @include test-border(green)
-}
-
-.textInput {
-  color: white;
-  background-color: transparent;
-  @include border-box($border-color);
-  text-align: left;
-  font-size: 16px;
-  margin: 5px 5px 5px 5px;
-} 
-
-.textAreaInput {
-  @extend .textInput;
-  height: 100px;
-}
-
-.textAreaInput:focus {
-  outline: none;
-}
-
-.wrapperBlockSelect {
-  // @include test-border(red)
+  // @include test-border(blue);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.select {
-  @extend .textInput;
-  margin: 20px;
+.wrapperText {
+  // @include test-border(yellow);
+  margin: 10px auto 10px auto;
+  color: $text-color-fog;
 }
 
-.select option {
-  background: $general-background-color;
+.textareaExercise {
+  @include border-box($border-color);
+  @include font(14px, Regular);
+  background-color: transparent;
+  color: $text-color;
+  resize: none;
+  height: 30px;
+  width: 250px;
+  margin-bottom: 15px;
+
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
 }
 
-.select:focus {
-  outline: none;
-}
-
-.wrapperBlockInput {
-  // @include test-border(goldenrod)
+.wrapperImage {
+  // @include test-border(green);
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-left: 5px;
+  justify-content: center;
+  width: 100%;
+  margin: auto auto 5px auto;
+}
+
+.wrapperImageName {
+  // @include test-border(magenta);
+  margin: auto auto 5px auto;
+  color: $text-color-fog;
+}
+
+.select {
+  color: white;
+  background-color: $general-background-color;
+  @include border-box($border-color);
+  text-align: left;
+  font-size: 14px;
+  margin: 5px 5px 0px 5px;
+}
+
+.textareaNote {
+  @include border-box($border-color);
+  background-color: transparent;
+  color: $text-color-fog;
+  resize: none;
+  height: 50px;
+  width: 250px;
+  margin-bottom: 122px;
 }
 
 .button {
   @include button(40px, 240px);
-  margin: 10px 20px 10px;
+  margin: 5px;
 }

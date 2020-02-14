@@ -3,7 +3,6 @@ import styles from './WindowNewExercise.module.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FormNewExerciseRedux from './FormNewExerciseRedux';
-import { changeVisibleWindowNewExerciseToStore } from '../../../redux/actions/actionWindowNewExercise';
 import withTranslator from '../../../hocs/withTranslator/withTranslator';
 import { withRouter } from 'react-router-dom';
 import { doAddNewExercise } from '../../../redux/actions/actionWindowNewExercise';
@@ -14,10 +13,6 @@ const WindowNewExercise = (props) => {
     props.doAddNewExercise(data, props.history);
   }
 
-  const onClick = () => {
-    props.changeVisibleWindowNewExerciseToStore(false);
-  }
-
   return (
     <div
       className={(props.windowVisible) ?
@@ -25,14 +20,6 @@ const WindowNewExercise = (props) => {
     >
       <div className={styles.window}>
         <FormNewExerciseRedux onSubmit={onSubmit} />
-        <div className={styles.wrapperButton}>
-          <button
-            className={styles.button}
-            onClick={onClick}
-          >
-            {props.dictionary.windowNewExerciseCancel}
-          </button>
-        </div>
       </div>
     </div >
   )
@@ -43,7 +30,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  changeVisibleWindowNewExerciseToStore,
   doAddNewExercise
 }, dispatch);
 

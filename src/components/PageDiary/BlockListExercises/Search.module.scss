@@ -1,5 +1,6 @@
 @import '../../../globalCSS/mixins.scss';
 @import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/fonts.scss';
 
 .search {
   display: block;
@@ -54,5 +55,5 @@
 .buttonDiv {
   @include button(40px, 50px);
   display: flex;
-  font-size: 10px;
+  @include font(9px, Regular);
 }

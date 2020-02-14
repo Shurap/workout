@@ -1,0 +1,24 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/fonts.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.dateLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  background-color: $general-background-color-light;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  color: white;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.imgFold {
+  transform: rotate(90deg);
+}

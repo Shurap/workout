@@ -1,0 +1,24 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/fonts.scss';
+@import '../../../globalCSS/mixins.scss';
+
+.countPages {
+  // @include test-border(blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.selectedPage {
+  @include font(20px, Bold);
+  cursor: pointer;
+  margin: 3px;
+  color: $button-color;
+}
+
+.unSelectedPage {
+  @include font(16px, Regular);
+  cursor: pointer;
+  margin: 3px;
+}

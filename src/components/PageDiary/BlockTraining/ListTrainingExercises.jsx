@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ListTrainingExercises.module.css'
+import styles from './ListTrainingExercises.module.scss'
 import TrainingExercise from './TrainingExercise';
 import { connect } from 'react-redux';
 import { getAllExercisesFromStore } from '../../../selectors/getAllExercisesFromStore';
@@ -21,7 +21,6 @@ const ListTrainingExrcises = (props) => {
       {arrayOfExercises}
     </div>
   )
-
 }
 
 const mapStateToProps = (state, ownProps) => ({

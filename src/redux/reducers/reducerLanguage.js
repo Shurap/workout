@@ -9,7 +9,6 @@ function language(state = initialState, action) {
   switch (action.type) {
 
     case CHANGE_LANGUAGE:
-      // return {...state, language: action.data};
       return merge(state, {language: action.data})
 
     default:

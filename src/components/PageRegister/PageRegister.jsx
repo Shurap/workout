@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageRegister.module.css';
+import styles from './PageRegister.module.scss';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 import FormRegisterRedux from './FormRegisterRedux';
 import SvgBarbell from '../common/svg/SvgBarbell';
@@ -8,10 +8,8 @@ import { bindActionCreators } from 'redux';
 import { doRegister } from '../../redux/actions/actionRegister';
 import { withRouter } from 'react-router-dom';
 
-import Spinner from '../common/Spinner';
-
 const PageRegister = (props) => {
-  
+
   const onSubmit = (data) => {
     props.doRegister(data, props.history);
   }
@@ -21,7 +19,6 @@ const PageRegister = (props) => {
       <div className={styles.window}>
         <SvgBarbell />
         <div className={styles.gag}></div>
-        <Spinner />
         <FormRegisterRedux onSubmit={onSubmit} />
       </div>
     </div >

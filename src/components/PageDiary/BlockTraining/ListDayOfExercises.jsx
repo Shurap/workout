@@ -20,7 +20,6 @@ const ListDayOfExercises = (props) => {
       {arrayDates}
     </div>
   )
-
 }
 
 const mapStateToProps = (state) => ({

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styles from './FormLogInRedux.module.css';
+import styles from './FormLogInRedux.module.scss';
 import { Field, reduxForm } from 'redux-form'
 import SvgPassword from '../common/svg/SvgPassword';
 import SvgMail from '../common/svg/SvgMail';
@@ -44,6 +44,7 @@ const FormLogIn = (props) => {
             validate={[requiredWithText, minLengthwithText]}
             placeholder={props.dictionary.password}
             autoComplete="off"
+            type="password"
           />
         </div>
       </div>
@@ -52,7 +53,6 @@ const FormLogIn = (props) => {
 
     </form>
   )
-
 }
 
 const FormLogInRedux = reduxForm({ form: 'FormLogIn' })(withTranslator(FormLogIn));

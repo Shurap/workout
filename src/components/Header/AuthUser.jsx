@@ -1,22 +1,18 @@
 import React from 'react';
-import styles from './AuthUser.module.css';
-import SvgAuthUser from '../common/svg/SvgAuthUser';
+import styles from './AuthUser.module.scss';
+import SvgAuthUserOn from '../common/svg/SvgAuthUserOn';
+import SvgAuthUserOff from '../common/svg/SvgAuthUserOff';
 import { connect } from "react-redux";
-
 
 const AuthUser = (props) => {
 
-
-
   return (
     <div className={styles.authUser}>
-    {props.authStatus ? (props.currentUserName ? <SvgAuthUser color='white' /> : <div className={styles.changerPicture}></div>) : <div className={styles.changerPicture}></div>}
-    {/* {props.currentUserName ? <SvgAuthUser color='white' /> : <div className={styles.changerPicture}></div>} */}
+
+      {props.authStatus ? <SvgAuthUserOn color='white' /> : <SvgAuthUserOff color='white' />}
 
       <div className={styles.wrapperText}>
-        {/* {props.authStatus ? (<p>{props.currentUserName ? props.currentUserName : 'Username...'}</p>) : null} */}
-        {props.authStatus ? (props.currentUserName ? props.currentUserName : '.Username.') : '.Username.'}
-        {/* {props.currentUserName ? props.currentUserName : '.Username.'} */}
+        {props.authStatus ? (props.currentUserName ? props.currentUserName : '...') : '...'}
       </div>
     </div>
   )

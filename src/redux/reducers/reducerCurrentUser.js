@@ -10,7 +10,12 @@ import {
 } from '../constants';
 import { merge } from 'ramda';
 
-const initialState = {};
+const initialState = {
+  email: '',
+  exercises: '',
+  schedule: '',
+  username: ''
+};
 
 function currentUser(state = initialState, action) {
   switch (action.type) {

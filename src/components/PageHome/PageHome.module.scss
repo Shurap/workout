@@ -1,0 +1,54 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.pageHome {
+
+}
+
+.backgroundPicture {
+  /* border: 5px solid peru; */
+  display: flex;
+  align-items: center;
+  height: 500px;
+  background-image: url('../../images/fitness-1882721_1920.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.wrapperBlockSvgText {
+  /* border: 5px solid greenyellow; */
+  color: white;
+  padding: 100px 50px 0 50px;
+}
+
+.wrapperText {
+  /* border: 5px solid darkorange; */
+  margin-bottom: 50px;
+}
+
+.pageContext {
+  /* border: 5px solid red; */
+  background-color: white;
+}
+
+.fieldCenter {
+  /* border: 5px solid blueviolet; */
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.separator {
+  /* border: 5px solid greenyellow; */
+  background-color: rgb(121, 121, 121);
+  height: 1px;
+  width: 100%;
+}
+
+.text {
+  text-shadow: 0 0 5px black;
+}

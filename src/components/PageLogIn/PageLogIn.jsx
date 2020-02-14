@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageLogIn.module.css';
+import styles from './PageLogIn.module.scss';
 import withTranslator from '../../hocs/withTranslator/withTranslator';
 import { Link } from 'react-router-dom';
 import FormLogInRedux from './FormLogInRedux';
@@ -8,10 +8,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { doSignIn } from '../../redux/actions/actionSignIn'
 import { withRouter } from 'react-router-dom';
-import Spinner from '../common/Spinner';
 
 const LogIn = (props) => {
-  
+
   const onSubmit = (data) => {
     props.doSignIn(data, props.history);
   }
@@ -21,7 +20,6 @@ const LogIn = (props) => {
       <div className={styles.window}>
         <SvgBarbell />
         <FormLogInRedux onSubmit={onSubmit} />
-        <Spinner />
         <div className={styles.wrappedText}>
           {props.dictionary.loginText}
           <Link className={styles.links} to='/register'>{props.dictionary.loginSignUp}</Link>

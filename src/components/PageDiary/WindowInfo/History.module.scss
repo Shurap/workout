@@ -1,0 +1,26 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.wrapperData {
+  // @include test-border(brown);
+  height: 120px;
+  overflow: auto;
+}
+
+.history {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapperDate {
+  // @include test-border(yellow);
+  display: flex;
+  justify-content: center;
+}
+
+.wrapperLegend {
+  // @include test-border(magenta);
+  display: flex;
+  justify-content: space-around;
+}

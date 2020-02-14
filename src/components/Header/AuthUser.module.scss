@@ -1,0 +1,28 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.authUser {
+  // @include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  margin-right: 10px;
+  padding-right: 5px;
+}
+
+.wrapperText {
+  // @include test-border(yellow);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  @include font(12px, Regular);
+  color: $text-color;
+}
+
+.changerPicture {
+  width: 50px;
+  height: 50px;
+}

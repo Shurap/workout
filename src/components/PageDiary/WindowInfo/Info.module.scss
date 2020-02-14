@@ -1,0 +1,77 @@
+@import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/mixins.scss';
+@import '../../../globalCSS/fonts.scss';
+
+.window {
+  // @include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $general-background-color;
+  width: 300px;
+  height: 500px;
+}
+
+.wrapperText {
+  // @include test-border(yellow);
+  margin: 10px auto 10px auto;
+  color: $text-color-fog;
+}
+
+.wrapperImage {
+  // @include test-border(green);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto auto 5px auto;
+}
+
+.image {
+  // @include test-border(blue);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: auto;
+}
+
+.wrapperImageName {
+  // @include test-border(magenta);
+  margin: auto auto 5px auto;
+  color: $text-color-fog;
+}
+
+.block {
+  // @include test-border(white);
+  display: block;
+  margin: 5px;
+}
+
+.textareaExercise {
+  // @include border-box($border-color); 
+  @include font(14px, Regular);
+  border: none; 
+  background-color: transparent;
+  color: $text-color;
+  resize: none;
+  height: 30px;
+  width: 250px;
+
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+
+}
+
+.textareaNote {
+  @include border-box($border-color);  
+  background-color: transparent;
+  color: $text-color-fog;
+  resize: none;
+  height: 50px;
+  width: 250px;
+}
+
+.button {
+  @include button(40px, 240px);
+  margin: 10px 20px 10px;
+}

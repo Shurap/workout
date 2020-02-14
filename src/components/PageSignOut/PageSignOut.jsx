@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { doSignOut } from '../../redux/actions/actionSignOut';
 import { withRouter } from 'react-router-dom';
-import Spinner from '../common/Spinner';
 
 const PageSignOut = (props) => {
 
@@ -18,7 +17,6 @@ const PageSignOut = (props) => {
     <div className={styles.logIn}>
       <div className={styles.window}>
         <SvgBarbell />
-        <Spinner />
         <button className={styles.button} onClick={handleClick}>{props.dictionary.SignOut}</button>
       </div>
     </div >

@@ -3,7 +3,6 @@ import reducers from '../redux/reducers';
 import createSagaMiddleware from 'redux-saga';
 import { mainSaga } from '../saga';
 
-// const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__;
 const devtools = window.__REDUX_DEVTOOLS_EXTENSION__ || (() => (noop) => noop );
 const sagaMiddleware = createSagaMiddleware();
 const enhancers = [

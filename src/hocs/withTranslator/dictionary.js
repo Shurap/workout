@@ -46,6 +46,7 @@ const dictionary = {
     windowNewExerciseEdit: 'Name',
     windowNewExerciseArea: 'Notes',
     windowNewExerciseButtonSave: 'Save',
+    windowNewExercise: 'New exercise',
     panelButtonCancel: 'Cancel',
     panelButtonDelete: 'Delete',
     panelButtonAdd: 'Add',
@@ -54,6 +55,14 @@ const dictionary = {
     panelButtonNo: 'No',
     panelButtonQuestion: 'Are you sure?',
     buttonClear: 'Clear',
+    weight: 'Weight',
+    repeat: 'Repeat',
+    set: 'Set',
+    windowInfoEdit: 'Edit exercise',
+    windowInfo: 'Information about exercise',
+    buttonSave: 'Save',
+    buttonCancel: 'Cancel',
+
   },
   'ru': {
     text: 'какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст какой-то текст ',
@@ -103,6 +112,7 @@ const dictionary = {
     windowNewExerciseEdit: 'Название',
     windowNewExerciseArea: 'Заметки',
     windowNewExerciseButtonSave: 'Сохранить',
+    windowNewExercise: 'Новое упражнение',
     panelButtonCancel: 'Отмена',
     panelButtonDelete: 'Удалить',
     panelButtonAdd: 'Добавить',
@@ -111,6 +121,14 @@ const dictionary = {
     panelButtonNo: 'Нет',
     panelButtonQuestion: 'Вы уверены?',
     buttonClear: 'Очистить',
+    weight: 'Вес',
+    repeat: 'Повтор',
+    set: 'Сет',
+    windowInfoEdit: 'Редактировать',
+    windowInfo: 'Информация об упражнении',
+    buttonSave: 'Сохранить',
+    buttonCancel: 'Отменить',
+
   }
 }
 

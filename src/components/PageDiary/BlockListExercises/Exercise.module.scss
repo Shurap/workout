@@ -1,8 +1,8 @@
 @import '../../../globalCSS/mixins.scss';
 @import '../../../globalCSS/variables.scss';
+@import '../../../globalCSS/fonts.scss';
 
 .exercise {
-  // @include test-border(red);
   @include border-box($border-color);
   position: relative;
   display: flex;
@@ -10,22 +10,32 @@
   margin: 10px;
   color: $text-color;
   cursor: pointer;
+  // @include test-border(red);
+}
+
+.wrapperImage {
+  // @include test-border(blue);
+  display: block;
+  min-width: 75px;
 }
 
 .image {
-  // width: 70px; 
+  // @include test-border(blue);
   height: 70px;
 }
 
 .wrapperText {
-  max-width: 170px;
-  padding-left: 15px;
-  padding-right: 5px;
+  // @include test-border(yellow);
+  width: 150px;
+  margin-bottom: 5px;
+  margin-right: 5px;
   overflow: hidden;
+  height: 70px;
+  word-wrap: break-word;
 }
 
 .panelButtonVisible {
-  // @include test-border(red);
+  // @include test-border(green);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -57,5 +67,5 @@
 
 .buttonDiv {
   @include button(40px, 50px);
-  font-size: 10px;
+  @include font(9px, Regular);
 }

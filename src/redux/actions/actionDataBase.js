@@ -1,8 +1,9 @@
 import {
- DO_SENT_EXERCISE,
- DO_ADD_NEW_CLEAR_EXERCISE,
- DO_DELETE_SET,
- DO_ADD_VALUE_SET,
+  DO_SENT_EXERCISE,
+  DO_ADD_NEW_CLEAR_EXERCISE,
+  DO_DELETE_SET,
+  DO_ADD_VALUE_SET,
+  DO_CHANGE_EXERCISE,
 } from '../constants';
 
 export function doSentExercise(data) {
@@ -37,5 +38,13 @@ export function doAddValueSet(date, exercise, array) {
     date,
     exercise,
     array
+  }
+}
+
+export function doChangeExercise(data, exerciseName) {
+  return {
+    type: DO_CHANGE_EXERCISE,
+    data,
+    exerciseName
   }
 }

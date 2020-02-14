@@ -1,0 +1,12 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.app {
+  margin: 0px;
+  padding: 0px;
+  @include font(16px, Regular);
+  color: $text-color;
+}
+
+@include scrollbar();

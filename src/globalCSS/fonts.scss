@@ -1,14 +1,19 @@
 @font-face {
-  font-family: "Anodina";
-  src : url("../fonts/Anodina-ExtraLight.otf");
+  font-family: "Regular";
+  src: url("../fonts/Roboto-Regular.woff");
 }
 
 @font-face {
-  font-family: "Anodina-bold";
-  src : url("../fonts/Anodina-Bold.otf");
+  font-family: "Bold";
+  src: url("../fonts/Roboto-Bold.woff");
 }
 
 @font-face {
-  font-family: "Anodina-light";
-  src : url("../fonts/Anodina-Light.otf");
+  font-family: "Thin";
+  src: url("../fonts/Roboto-Thin.woff");
+}
+
+@font-face {
+  font-family: "Light";
+  src: url("../fonts/Roboto-Light.woff");
 }

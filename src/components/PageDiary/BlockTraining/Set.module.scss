@@ -3,8 +3,6 @@
 @import '../../../globalCSS/fonts.scss';
 
 .setSmall {
-  // @include test-border(red);
-  
   @include border-box($border-color);
   display: flex;
   flex-direction: column;
@@ -13,8 +11,7 @@
   margin: 2px;
   height: 70px;
   width: 50px;
-  font: 18px Anodina-bold;
-  color: white;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -25,7 +22,7 @@
   transition: all 0.3s;
   height: 140px;
   width: 160px;
-  background-color: rgba(75, 24, 217, 0.5);
+  background-color: rgba(75, 24, 217, 0.3);
   z-index: 1001;
 }
 
@@ -35,43 +32,44 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.7)
 }
 
-.wrapperSet {
+.wrapperSetSmall {
   // @include test-border(red);
   display: flex;
   justify-content: center;
-  font: 16px Anodina;
-  color: $text-color-fog;
   flex-grow: 1;
+  @include font(12px, Regular);
+  color: $text-color-fog;
 }
 
-.wrapperWight {
-  @extend .wrapperSet;
-  font: 18px Anodina-bold;
+.wrapperSetBig {
+  // @include test-border(red);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding-left: 25px;
+  @include font(16px, Regular);
+  color: $text-color-fog;
 }
 
-.wrapperCount {
-  @extend .wrapperSet;
-  font: 18px Anodina-bold;
-}
-
-.imgClose {
+.wrapperWeight {
   // @include test-border(blue);
-  // align-self: flex-end;
-  // display: flex;
-  // justify-content: flex-end;
-  // align-items: center;
+  @include font(16px, Bold);
+  color: $text-color;
+}
+
+.wrapperRepeat {
+  // @include test-border(yellow);
+  @include font(16px, Bold);
+  color: $text-color;
 }
 
 .wrapperSetImage {
   // @include test-border(green);
+  position: relative;
   display: flex;
   flex-direction: row;
-  // padding-left: 24px;
 }

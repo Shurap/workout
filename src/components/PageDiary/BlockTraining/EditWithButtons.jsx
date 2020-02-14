@@ -43,7 +43,7 @@ const EditWithButtons = (props) => {
   return (
     <div>
       <div className={styles.wrapperText}>
-        {props.target}
+        {props.note}
       </div>
       <div className={styles.wrapperEditButtons}>
         <img

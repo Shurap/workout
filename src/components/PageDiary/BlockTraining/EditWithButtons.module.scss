@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font: 10px Anodina;
-  color: white;
+  @include font(12px, Regular);
+  color: $text-color-fog;
 }
 
 .wrapperEditButtons {
@@ -22,8 +22,8 @@
   background-color: transparent;
   width: 50px;
   text-align: center;
-  font: 18px Anodina-bold;
-  color: white;
+  @include font(16px, Bold);
+  color: $text-color;
 }
 
 .buttonRight {
@@ -32,17 +32,9 @@
   width: 24px;
 }
 
-// .buttonRightForward {
-//   @extend .buttonRight;
-// }
-
 .buttonLeft {
   // @include test-border(red);
   transform: rotate(180deg);
   height: 24px;
   width: 24px;
 }
-
-// .buttonLeftForward {
-//   @extend .buttonLeft;
-// }

@@ -1,0 +1,20 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.pageDiary {
+    // @include test-border(red);
+    margin-top: 70px;
+    height: calc(100vh - 140px);
+    display: flex;
+    background-image: url('../../images/fitness-bright.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapperBlocks {
+    // @include test-border(yellow);
+    display: flex;
+    width: 100%;
+}

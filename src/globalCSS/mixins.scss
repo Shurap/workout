@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './fonts.scss';
 
 @mixin button($height, $width){
   height: $height;
@@ -12,6 +13,8 @@
   background-color: $button-color;
   border: none;
   border-radius: 20px;
+  @include font(16px, Regular);
+  color: $text-color;
 
   &:hover {
     background-color: $button-color-hover;
@@ -47,5 +50,26 @@
   &:focus {
     border-right: 1px solid $border-box-active-color;
     border-bottom: 1px solid $border-box-active-color;
+    outline: none;
   }
+}
+
+@mixin scrollbar() {
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color:$general-background-color;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: $button-color;
+  }
+} 
+
+@mixin font($size, $font) {
+  font: $size $font;
 }

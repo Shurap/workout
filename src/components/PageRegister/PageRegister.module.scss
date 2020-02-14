@@ -1,0 +1,34 @@
+@import '../../globalCSS/mixins.scss';
+@import '../../globalCSS/variables.scss';
+@import '../../globalCSS/fonts.scss';
+
+.pageRegister {
+  //@include test-border(green);
+  margin-top: 70px;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../images/fitness-bright.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.window {
+  //@include test-border(red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $general-background-color;
+  width: 300px;
+  height: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+
+.gag {
+  height: 50px;
+}
